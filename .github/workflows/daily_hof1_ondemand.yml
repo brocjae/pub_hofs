@@ -1,10 +1,9 @@
-
-
-name: daily_hof1_ondemand
+name: daily_hof1
 
 # Run this workflow every time a new commit pushed to your repository
 on:
-  workflow_dispatch
+  schedule:
+    - cron: '0 */5 * * *'
 
 jobs:
   # Set the job key. The key is displayed as the job name
@@ -14,6 +13,7 @@ jobs:
     name: run_23
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -57,6 +57,7 @@ jobs:
     name: run_45
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -98,6 +99,7 @@ jobs:
     name: run_67
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -140,6 +142,7 @@ jobs:
     name: run_89
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -182,6 +185,7 @@ jobs:
     name: run_1011
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
