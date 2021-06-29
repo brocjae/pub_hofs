@@ -1,8 +1,7 @@
 name: test_git
 
 # Run this workflow every time a new commit pushed to your repository
-on:
-  workflow_dispatch
+on: [ push ]
   
 jobs:
   create_commit:
