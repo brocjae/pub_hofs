@@ -1,0 +1,1 @@
+{"get_vip_shop": {"next": 1625013641, "param": {"track": true, "resize": 0.3}}, "get_vip_box": {"next": 1625013811, "param": {"track": true, "resize": 0.3}}, "up_command": {"next": 1625029456, "param": {"name": "sheila", "step_width": 3, "max_try": 8, "track": true, "resize": 0.3, "trigger": 110}, "func": "upgrade_commanders"}}
