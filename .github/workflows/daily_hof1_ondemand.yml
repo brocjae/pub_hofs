@@ -47,8 +47,6 @@ jobs:
           cd /home/runner/work/got_auto/src
           python --version
           python run_daily_hof.py 2,3
-
-
  
 
   run_45:
@@ -91,7 +89,6 @@ jobs:
           cd /home/runner/work/got_auto/src
           python --version
           python run_daily_hof.py 4,5         
-
             
   run_67:
     # Name the Job
@@ -178,7 +175,6 @@ jobs:
           python run_daily_hof.py 8,9           
           
           
-
   run_1011:
     # Name the Job
     name: run_1011
@@ -219,4 +215,3 @@ jobs:
           cd /home/runner/work/got_auto/src
           python --version
           python run_daily_hof.py 10,11
-                   
