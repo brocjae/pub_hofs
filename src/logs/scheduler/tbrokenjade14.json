@@ -7,14 +7,14 @@
         }
     },
     "bank_claim": {
-        "next": 1625187682,
+        "next": 1625242036,
         "param": {
             "track": true,
             "resize": 0.25
         }
     },
     "heal_100": {
-        "next": 1625184163,
+        "next": 1625238515,
         "param": {
             "track": true,
             "resize": 0.25,
