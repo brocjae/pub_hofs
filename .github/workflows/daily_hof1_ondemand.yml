@@ -29,6 +29,7 @@ jobs:
           DEFAULT_BRANCH: main
           MASTER_KEY: ${{ secrets.MASTER_KEY}}
           GOTAUTH: ${{ secrets.GOTAUTH}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd ../../
           pwd
@@ -42,11 +43,14 @@ jobs:
         env:
           DEFAULT_BRANCH: main
           MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
           python run_daily_hof.py 2,3
+
+
  
 
   run_45:
@@ -71,6 +75,7 @@ jobs:
           DEFAULT_BRANCH: main
           MASTER_KEY: ${{ secrets.MASTER_KEY}}
           GOTAUTH: ${{ secrets.GOTAUTH}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd ../../
           pwd
@@ -84,11 +89,13 @@ jobs:
         env:
           DEFAULT_BRANCH: main
           MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
           python run_daily_hof.py 4,5         
+
             
   run_67:
     # Name the Job
@@ -112,6 +119,7 @@ jobs:
           DEFAULT_BRANCH: main
           MASTER_KEY: ${{ secrets.MASTER_KEY}}
           GOTAUTH: ${{ secrets.GOTAUTH}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd ../../
           pwd
@@ -125,6 +133,7 @@ jobs:
         env:
           DEFAULT_BRANCH: main
           MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
@@ -155,6 +164,7 @@ jobs:
           DEFAULT_BRANCH: main
           MASTER_KEY: ${{ secrets.MASTER_KEY}}
           GOTAUTH: ${{ secrets.GOTAUTH}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd ../../
           pwd
@@ -168,6 +178,7 @@ jobs:
         env:
           DEFAULT_BRANCH: main
           MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
@@ -175,6 +186,7 @@ jobs:
           python run_daily_hof.py 8,9           
           
           
+
   run_1011:
     # Name the Job
     name: run_1011
@@ -197,6 +209,7 @@ jobs:
           DEFAULT_BRANCH: main
           MASTER_KEY: ${{ secrets.MASTER_KEY}}
           GOTAUTH: ${{ secrets.GOTAUTH}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd ../../
           pwd
@@ -210,6 +223,7 @@ jobs:
         env:
           DEFAULT_BRANCH: main
           MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
