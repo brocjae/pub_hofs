@@ -127,5 +127,14 @@
             "buy": 0,
             "dragon_id": 0
         }
+    },
+    "heal_500": {
+        "next": 1625290749,
+        "param": {
+            "track": true,
+            "resize": 0.25,
+            "max_to_heal": 500
+        },
+        "func": "heal_max"
     }
 }
