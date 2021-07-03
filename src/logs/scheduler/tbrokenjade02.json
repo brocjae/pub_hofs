@@ -127,5 +127,12 @@
                 "dragon"
             ]
         }
+    },
+    "daily_msg": {
+        "next": 1625408566,
+        "param": {
+            "track": true,
+            "resize": 0.25
+        }
     }
 }
