@@ -31,14 +31,14 @@
         }
     },
     "trade": {
-        "next": 1625393924,
+        "next": 1625411921,
         "param": {
             "track": true,
             "resize": 0.25
         }
     },
     "get_amethyst": {
-        "next": 1625397518,
+        "next": 1625415513,
         "param": {
             "track": true,
             "resize": 0.3
