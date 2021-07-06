@@ -118,7 +118,7 @@
         "func": "heal_max"
     },
     "daily_msg": {
-        "next": 1625566799,
+        "next": 1625651238,
         "param": {
             "track": true,
             "resize": 0.25
