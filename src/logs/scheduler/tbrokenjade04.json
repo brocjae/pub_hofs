@@ -1,13 +1,13 @@
 {
     "check_box": {
-        "next": 1625808299,
+        "next": 1625825375,
         "param": {
             "track": true,
             "resize": 0.25
         }
     },
     "bank_claim": {
-        "next": 1625811056,
+        "next": 1625828953,
         "param": {
             "track": true,
             "resize": 0.25
