@@ -95,6 +95,7 @@ jobs:
           pwd
           cd /home/runner/work/got_auto/src
           python --version
+          sleep 15
           python run_daily_hof.py 4,5         
 
             
@@ -139,6 +140,7 @@ jobs:
           pwd
           cd /home/runner/work/got_auto/src
           python --version
+          sleep 30
           python run_daily_hof.py 6,7          
           
           
@@ -184,6 +186,7 @@ jobs:
           pwd
           cd /home/runner/work/got_auto/src
           python --version
+          sleep 45
           python run_daily_hof.py 8,9           
           
           
@@ -229,5 +232,6 @@ jobs:
           pwd
           cd /home/runner/work/got_auto/src
           python --version
+          sleep 60
           python run_daily_hof.py 10,11
                    
