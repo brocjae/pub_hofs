@@ -3,7 +3,7 @@ name: daily_hof2
 # Run this workflow every time a new commit pushed to your repository
 on:
   schedule:
-    - cron: '0 */5 * * *'
+    - cron: '5 */5 * * *'
 
 jobs:
   # Set the job key. The key is displayed as the job name
@@ -95,6 +95,7 @@ jobs:
           pwd
           cd /home/runner/work/got_auto/src
           python --version
+          sleep 15
           python run_daily_hof.py 14,15         
 
             
@@ -139,6 +140,7 @@ jobs:
           pwd
           cd /home/runner/work/got_auto/src
           python --version
+          sleep 30
           python run_daily_hof.py 16,17          
           
           
@@ -184,6 +186,7 @@ jobs:
           pwd
           cd /home/runner/work/got_auto/src
           python --version
+          sleep 45
           python run_daily_hof.py 18,19           
           
           
@@ -229,5 +232,6 @@ jobs:
           pwd
           cd /home/runner/work/got_auto/src
           python --version
+          sleep 60
           python run_daily_hof.py 20,22
                
