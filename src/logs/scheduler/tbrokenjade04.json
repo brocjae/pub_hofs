@@ -1,6 +1,6 @@
 {
     "check_box": {
-        "next": 1626135680,
+        "next": 1626135484,
         "param": {
             "track": true,
             "resize": 0.25
@@ -138,7 +138,7 @@
         "func": "heal_max"
     },
     "daily_msg": {
-        "next": 1626138960,
+        "next": 1626121629,
         "param": {
             "track": true,
             "resize": 0.25
