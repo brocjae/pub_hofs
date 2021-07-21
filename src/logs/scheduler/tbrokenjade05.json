@@ -138,7 +138,7 @@
         "func": "heal_max"
     },
     "daily_msg": {
-        "next": 1626885206,
+        "next": 1626966730,
         "param": {
             "track": true,
             "resize": 0.25
@@ -159,7 +159,7 @@
         }
     },
     "sell_quick_box": {
-        "next": 1626883503,
+        "next": 1626905596,
         "param": {
             "track": true,
             "resize": 0.25,
