@@ -127,7 +127,7 @@
         }
     },
     "explore_drag": {
-        "next": 1627105570,
+        "next": 1627126398,
         "param": {
             "track": true,
             "resize": 0.25,
@@ -146,7 +146,7 @@
         "func": "heal_max"
     },
     "daily_msg": {
-        "next": 1627104433,
+        "next": 1627187802,
         "param": {
             "track": true,
             "resize": 0.25
