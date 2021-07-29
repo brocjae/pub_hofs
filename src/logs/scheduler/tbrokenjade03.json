@@ -39,21 +39,21 @@
         }
     },
     "trade": {
-        "next": 1627535677,
+        "next": 1627555779,
         "param": {
             "track": true,
             "resize": 0.25
         }
     },
     "get_amethyst": {
-        "next": 1627539293,
+        "next": 1627559396,
         "param": {
             "track": true,
             "resize": 0.3
         }
     },
     "get_dragonforged": {
-        "next": 1627535700,
+        "next": 1627559474,
         "param": {
             "track": true,
             "resize": 0.3
