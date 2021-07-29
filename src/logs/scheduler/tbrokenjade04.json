@@ -152,7 +152,7 @@
         }
     },
     "training_ground": {
-        "next": 1627505100,
+        "next": 1627557005,
         "param": {
             "track": true,
             "resize": 0.25
