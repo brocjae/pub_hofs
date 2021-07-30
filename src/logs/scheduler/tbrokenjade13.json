@@ -109,7 +109,7 @@
         }
     },
     "heal_500": {
-        "next": 1627590788,
+        "next": 1627608091,
         "param": {
             "track": true,
             "resize": 0.25,
