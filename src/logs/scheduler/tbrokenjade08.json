@@ -1,6 +1,6 @@
 {
     "check_box": {
-        "next": 1628609080,
+        "next": 1628609600,
         "param": {
             "track": true,
             "resize": 0.25
@@ -31,28 +31,28 @@
         }
     },
     "trade": {
-        "next": 1628592413,
+        "next": 1628608964,
         "param": {
             "track": true,
             "resize": 0.25
         }
     },
     "get_amethyst": {
-        "next": 1628596038,
+        "next": 1628612594,
         "param": {
             "track": true,
             "resize": 0.3
         }
     },
     "get_dragonforged": {
-        "next": 1628596138,
+        "next": 1628612705,
         "param": {
             "track": true,
             "resize": 0.3
         }
     },
     "get_vip_shop": {
-        "next": 1628592545,
+        "next": 1628612785,
         "param": {
             "track": true,
             "resize": 0.3
@@ -132,7 +132,7 @@
         }
     },
     "training_ground": {
-        "next": 1628593805,
+        "next": 1628610451,
         "param": {
             "track": true,
             "resize": 0.25
