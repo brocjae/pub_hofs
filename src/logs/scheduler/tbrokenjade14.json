@@ -1,6 +1,6 @@
 {
     "check_box": {
-        "next": 1628611310,
+        "next": 1628611580,
         "param": {
             "track": true,
             "resize": 0.25
@@ -23,7 +23,7 @@
         "func": "heal_max"
     },
     "sheltering": {
-        "next": 1628606177,
+        "next": 1628612356,
         "param": {
             "track": true,
             "resize": 0.25,
@@ -31,28 +31,28 @@
         }
     },
     "trade": {
-        "next": 1628591914,
+        "next": 1628611637,
         "param": {
             "track": true,
             "resize": 0.25
         }
     },
     "get_amethyst": {
-        "next": 1628595573,
+        "next": 1628615316,
         "param": {
             "track": true,
             "resize": 0.3
         }
     },
     "get_dragonforged": {
-        "next": 1628595650,
+        "next": 1628615401,
         "param": {
             "track": true,
             "resize": 0.3
         }
     },
     "get_vip_shop": {
-        "next": 1628592057,
+        "next": 1628615485,
         "param": {
             "track": true,
             "resize": 0.3
