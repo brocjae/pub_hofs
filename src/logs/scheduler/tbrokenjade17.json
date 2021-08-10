@@ -23,7 +23,7 @@
         "func": "heal_max"
     },
     "sheltering": {
-        "next": 1628573265,
+        "next": 1628608355,
         "param": {
             "track": true,
             "resize": 0.25,
