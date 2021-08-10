@@ -1,6 +1,6 @@
 {
     "check_box": {
-        "next": 1628592494,
+        "next": 1628610461,
         "param": {
             "track": true,
             "resize": 0.25
@@ -23,7 +23,7 @@
         "func": "heal_max"
     },
     "sheltering": {
-        "next": 1628606349,
+        "next": 1628624348,
         "param": {
             "track": true,
             "resize": 0.25,
@@ -31,28 +31,28 @@
         }
     },
     "trade": {
-        "next": 1628592190,
+        "next": 1628610186,
         "param": {
             "track": true,
             "resize": 0.25
         }
     },
     "get_amethyst": {
-        "next": 1628595811,
+        "next": 1628613813,
         "param": {
             "track": true,
             "resize": 0.3
         }
     },
     "get_dragonforged": {
-        "next": 1628595899,
+        "next": 1628613899,
         "param": {
             "track": true,
             "resize": 0.3
         }
     },
     "get_vip_shop": {
-        "next": 1628592306,
+        "next": 1628613978,
         "param": {
             "track": true,
             "resize": 0.3
@@ -99,7 +99,7 @@
         }
     },
     "explore_drag": {
-        "next": 1628593906,
+        "next": 1628611803,
         "param": {
             "track": true,
             "resize": 0.25,
@@ -109,7 +109,7 @@
         }
     },
     "heal_500": {
-        "next": 1628591710,
+        "next": 1628609742,
         "param": {
             "track": true,
             "resize": 0.25,
@@ -132,7 +132,7 @@
         }
     },
     "training_ground": {
-        "next": 1628593569,
+        "next": 1628611650,
         "param": {
             "track": true,
             "resize": 0.25
