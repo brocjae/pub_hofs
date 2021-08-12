@@ -173,5 +173,17 @@
             "resize": 0.25,
             "min_level": 5
         }
+    },
+    "up_command": {
+        "next": 1628767487,
+        "param": {
+            "name": "sansa",
+            "step_width": 2,
+            "max_try": 8,
+            "track": true,
+            "resize": 0.25,
+            "trigger": 40
+        },
+        "func": "upgrade_commanders"
     }
 }
