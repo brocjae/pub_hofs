@@ -46,6 +46,7 @@ jobs:
           MASTER_KEY: ${{ secrets.MASTER_KEY }}
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
@@ -91,6 +92,7 @@ jobs:
           MASTER_KEY: ${{ secrets.MASTER_KEY }}
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
@@ -136,6 +138,7 @@ jobs:
           MASTER_KEY: ${{ secrets.MASTER_KEY }}
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
@@ -181,6 +184,7 @@ jobs:
           MASTER_KEY: ${{ secrets.MASTER_KEY }}
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
@@ -226,6 +230,7 @@ jobs:
           MASTER_KEY: ${{ secrets.MASTER_KEY }}
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
@@ -271,6 +276,7 @@ jobs:
           MASTER_KEY: ${{ secrets.MASTER_KEY }}
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
@@ -316,6 +322,7 @@ jobs:
           MASTER_KEY: ${{ secrets.MASTER_KEY }}
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
@@ -361,6 +368,7 @@ jobs:
           MASTER_KEY: ${{ secrets.MASTER_KEY }}
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
@@ -406,6 +414,7 @@ jobs:
           MASTER_KEY: ${{ secrets.MASTER_KEY }}
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
@@ -451,6 +460,7 @@ jobs:
           MASTER_KEY: ${{ secrets.MASTER_KEY }}
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
@@ -496,6 +506,7 @@ jobs:
           MASTER_KEY: ${{ secrets.MASTER_KEY }}
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
@@ -541,6 +552,7 @@ jobs:
           MASTER_KEY: ${{ secrets.MASTER_KEY }}
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
@@ -586,6 +598,7 @@ jobs:
           MASTER_KEY: ${{ secrets.MASTER_KEY }}
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
@@ -631,6 +644,7 @@ jobs:
           MASTER_KEY: ${{ secrets.MASTER_KEY }}
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
@@ -676,6 +690,7 @@ jobs:
           MASTER_KEY: ${{ secrets.MASTER_KEY }}
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
@@ -721,6 +736,7 @@ jobs:
           MASTER_KEY: ${{ secrets.MASTER_KEY }}
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
@@ -766,6 +782,7 @@ jobs:
           MASTER_KEY: ${{ secrets.MASTER_KEY }}
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
@@ -811,6 +828,7 @@ jobs:
           MASTER_KEY: ${{ secrets.MASTER_KEY }}
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
@@ -856,6 +874,7 @@ jobs:
           MASTER_KEY: ${{ secrets.MASTER_KEY }}
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
@@ -901,6 +920,7 @@ jobs:
           MASTER_KEY: ${{ secrets.MASTER_KEY }}
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
@@ -946,6 +966,7 @@ jobs:
           MASTER_KEY: ${{ secrets.MASTER_KEY }}
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
@@ -991,6 +1012,7 @@ jobs:
           MASTER_KEY: ${{ secrets.MASTER_KEY }}
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
@@ -1036,6 +1058,7 @@ jobs:
           MASTER_KEY: ${{ secrets.MASTER_KEY }}
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
