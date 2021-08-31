@@ -1,0 +1,951 @@
+name: manual_daily
+
+# Run this workflow every time a new commit pushed to your repository
+on:
+  repository_dispatch:
+    types: manual_daily
+    
+jobs:
+
+  daily_0:
+    # Name the Job
+    name: daily_0
+    if:  contains(github.event.client_payload.id, ',0,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${ secrets.MASTER_KEY }
+          GOTAUTH: ${ secrets.GOTAUTH }
+          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+        run: |
+          cd ../../
+          pwd
+          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          cd got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run daily_0
+        env:
+          DEFAULT_BRANCH: main
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          python run_daily_hof.py 0 
+
+  daily_1:
+    # Name the Job
+    name: daily_1
+    if:  contains(github.event.client_payload.id, ',1,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${ secrets.MASTER_KEY }
+          GOTAUTH: ${ secrets.GOTAUTH }
+          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+        run: |
+          cd ../../
+          pwd
+          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          cd got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run daily_1
+        env:
+          DEFAULT_BRANCH: main
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          python run_daily_hof.py 1 
+
+  daily_2:
+    # Name the Job
+    name: daily_2
+    if:  contains(github.event.client_payload.id, ',2,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${ secrets.MASTER_KEY }
+          GOTAUTH: ${ secrets.GOTAUTH }
+          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+        run: |
+          cd ../../
+          pwd
+          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          cd got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run daily_2
+        env:
+          DEFAULT_BRANCH: main
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          python run_daily_hof.py 2 
+
+  daily_3:
+    # Name the Job
+    name: daily_3
+    if:  contains(github.event.client_payload.id, ',3,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${ secrets.MASTER_KEY }
+          GOTAUTH: ${ secrets.GOTAUTH }
+          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+        run: |
+          cd ../../
+          pwd
+          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          cd got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run daily_3
+        env:
+          DEFAULT_BRANCH: main
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          python run_daily_hof.py 3 
+
+  daily_4:
+    # Name the Job
+    name: daily_4
+    if:  contains(github.event.client_payload.id, ',4,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${ secrets.MASTER_KEY }
+          GOTAUTH: ${ secrets.GOTAUTH }
+          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+        run: |
+          cd ../../
+          pwd
+          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          cd got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run daily_4
+        env:
+          DEFAULT_BRANCH: main
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          python run_daily_hof.py 4 
+
+  daily_5:
+    # Name the Job
+    name: daily_5
+    if:  contains(github.event.client_payload.id, ',5,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${ secrets.MASTER_KEY }
+          GOTAUTH: ${ secrets.GOTAUTH }
+          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+        run: |
+          cd ../../
+          pwd
+          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          cd got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run daily_5
+        env:
+          DEFAULT_BRANCH: main
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          python run_daily_hof.py 5 
+
+  daily_6:
+    # Name the Job
+    name: daily_6
+    if:  contains(github.event.client_payload.id, ',6,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${ secrets.MASTER_KEY }
+          GOTAUTH: ${ secrets.GOTAUTH }
+          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+        run: |
+          cd ../../
+          pwd
+          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          cd got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run daily_6
+        env:
+          DEFAULT_BRANCH: main
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          python run_daily_hof.py 6 
+
+  daily_7:
+    # Name the Job
+    name: daily_7
+    if:  contains(github.event.client_payload.id, ',7,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${ secrets.MASTER_KEY }
+          GOTAUTH: ${ secrets.GOTAUTH }
+          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+        run: |
+          cd ../../
+          pwd
+          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          cd got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run daily_7
+        env:
+          DEFAULT_BRANCH: main
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          python run_daily_hof.py 7 
+
+  daily_8:
+    # Name the Job
+    name: daily_8
+    if:  contains(github.event.client_payload.id, ',8,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${ secrets.MASTER_KEY }
+          GOTAUTH: ${ secrets.GOTAUTH }
+          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+        run: |
+          cd ../../
+          pwd
+          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          cd got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run daily_8
+        env:
+          DEFAULT_BRANCH: main
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          python run_daily_hof.py 8 
+
+  daily_9:
+    # Name the Job
+    name: daily_9
+    if:  contains(github.event.client_payload.id, ',9,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${ secrets.MASTER_KEY }
+          GOTAUTH: ${ secrets.GOTAUTH }
+          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+        run: |
+          cd ../../
+          pwd
+          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          cd got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run daily_9
+        env:
+          DEFAULT_BRANCH: main
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          python run_daily_hof.py 9 
+
+  daily_10:
+    # Name the Job
+    name: daily_10
+    if:  contains(github.event.client_payload.id, ',10,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${ secrets.MASTER_KEY }
+          GOTAUTH: ${ secrets.GOTAUTH }
+          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+        run: |
+          cd ../../
+          pwd
+          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          cd got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run daily_10
+        env:
+          DEFAULT_BRANCH: main
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          python run_daily_hof.py 10 
+
+  daily_11:
+    # Name the Job
+    name: daily_11
+    if:  contains(github.event.client_payload.id, ',11,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${ secrets.MASTER_KEY }
+          GOTAUTH: ${ secrets.GOTAUTH }
+          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+        run: |
+          cd ../../
+          pwd
+          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          cd got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run daily_11
+        env:
+          DEFAULT_BRANCH: main
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          python run_daily_hof.py 11 
+
+  daily_12:
+    # Name the Job
+    name: daily_12
+    if:  contains(github.event.client_payload.id, ',12,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${ secrets.MASTER_KEY }
+          GOTAUTH: ${ secrets.GOTAUTH }
+          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+        run: |
+          cd ../../
+          pwd
+          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          cd got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run daily_12
+        env:
+          DEFAULT_BRANCH: main
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          python run_daily_hof.py 12 
+
+  daily_13:
+    # Name the Job
+    name: daily_13
+    if:  contains(github.event.client_payload.id, ',13,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${ secrets.MASTER_KEY }
+          GOTAUTH: ${ secrets.GOTAUTH }
+          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+        run: |
+          cd ../../
+          pwd
+          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          cd got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run daily_13
+        env:
+          DEFAULT_BRANCH: main
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          python run_daily_hof.py 13 
+
+  daily_14:
+    # Name the Job
+    name: daily_14
+    if:  contains(github.event.client_payload.id, ',14,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${ secrets.MASTER_KEY }
+          GOTAUTH: ${ secrets.GOTAUTH }
+          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+        run: |
+          cd ../../
+          pwd
+          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          cd got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run daily_14
+        env:
+          DEFAULT_BRANCH: main
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          python run_daily_hof.py 14 
+
+  daily_15:
+    # Name the Job
+    name: daily_15
+    if:  contains(github.event.client_payload.id, ',15,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${ secrets.MASTER_KEY }
+          GOTAUTH: ${ secrets.GOTAUTH }
+          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+        run: |
+          cd ../../
+          pwd
+          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          cd got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run daily_15
+        env:
+          DEFAULT_BRANCH: main
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          python run_daily_hof.py 15 
+
+  daily_16:
+    # Name the Job
+    name: daily_16
+    if:  contains(github.event.client_payload.id, ',16,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${ secrets.MASTER_KEY }
+          GOTAUTH: ${ secrets.GOTAUTH }
+          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+        run: |
+          cd ../../
+          pwd
+          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          cd got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run daily_16
+        env:
+          DEFAULT_BRANCH: main
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          python run_daily_hof.py 16 
+
+  daily_17:
+    # Name the Job
+    name: daily_17
+    if:  contains(github.event.client_payload.id, ',17,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${ secrets.MASTER_KEY }
+          GOTAUTH: ${ secrets.GOTAUTH }
+          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+        run: |
+          cd ../../
+          pwd
+          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          cd got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run daily_17
+        env:
+          DEFAULT_BRANCH: main
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          python run_daily_hof.py 17 
+
+  daily_18:
+    # Name the Job
+    name: daily_18
+    if:  contains(github.event.client_payload.id, ',18,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${ secrets.MASTER_KEY }
+          GOTAUTH: ${ secrets.GOTAUTH }
+          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+        run: |
+          cd ../../
+          pwd
+          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          cd got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run daily_18
+        env:
+          DEFAULT_BRANCH: main
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          python run_daily_hof.py 18 
+
+  daily_19:
+    # Name the Job
+    name: daily_19
+    if:  contains(github.event.client_payload.id, ',19,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${ secrets.MASTER_KEY }
+          GOTAUTH: ${ secrets.GOTAUTH }
+          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+        run: |
+          cd ../../
+          pwd
+          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          cd got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run daily_19
+        env:
+          DEFAULT_BRANCH: main
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          python run_daily_hof.py 19 
+
+  daily_20:
+    # Name the Job
+    name: daily_20
+    if:  contains(github.event.client_payload.id, ',20,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${ secrets.MASTER_KEY }
+          GOTAUTH: ${ secrets.GOTAUTH }
+          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+        run: |
+          cd ../../
+          pwd
+          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          cd got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run daily_20
+        env:
+          DEFAULT_BRANCH: main
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          python run_daily_hof.py 20 
+
+  daily_21:
+    # Name the Job
+    name: daily_21
+    if:  contains(github.event.client_payload.id, ',21,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${ secrets.MASTER_KEY }
+          GOTAUTH: ${ secrets.GOTAUTH }
+          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+        run: |
+          cd ../../
+          pwd
+          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          cd got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run daily_21
+        env:
+          DEFAULT_BRANCH: main
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          python run_daily_hof.py 21 
+
+  daily_22:
+    # Name the Job
+    name: daily_22
+    if:  contains(github.event.client_payload.id, ',22,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${ secrets.MASTER_KEY }
+          GOTAUTH: ${ secrets.GOTAUTH }
+          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+        run: |
+          cd ../../
+          pwd
+          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          cd got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run daily_22
+        env:
+          DEFAULT_BRANCH: main
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          python run_daily_hof.py 22 
