@@ -2,14 +2,15 @@ name: daily_hof
 
 # Run this workflow every time a new commit pushed to your repository
 on:
-  workflow_dispatch
+  schedule:
+    - cron: '0 */5 * * *'
 
 jobs:
-  # Set the job key. The key is displayed as the job name
-  # when a job name is not provided
-  run_3_10:
+
+
+  job_2_5:
     # Name the Job
-    name: run_3_10
+    name: job_2_5
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
 
@@ -20,10 +21,94 @@ jobs:
      
           
       # Runs the Super-Linter action
-      - name: run_23
+      - name: run_2_5
         env:
           DEFAULT_BRANCH: main
           MASTER_KEY: ${{ secrets.MASTER_KEY}}
           SCHEDULE_TOKEN: ${{ secrets.SCHEDULE_TOKEN }}
         run: |
-          curl -X POST -H "authorization: Bearer ${{ secrets.SCHEDULE_TOKEN }}" https://api.github.com/repos/brocjae/pub_hofs/dispatches -d '{"event_type":"manual_daily","client_payload": {"id":",2,3,4,5,"}'
+          curl -X POST -H "authorization: Bearer ${{ secrets.SCHEDULE_TOKEN }} https://api.github.com/repos/brocjae/pub_hofs/dispatches -d '{"event_type":"manual_daily","client_payload": {"id":",2,3,4,5,"}' 
+
+  job_6_9:
+    # Name the Job
+    name: job_6_9
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+     
+          
+      # Runs the Super-Linter action
+      - name: run_6_9
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          SCHEDULE_TOKEN: ${{ secrets.SCHEDULE_TOKEN }}
+        run: |
+          curl -X POST -H "authorization: Bearer ${{ secrets.SCHEDULE_TOKEN }} https://api.github.com/repos/brocjae/pub_hofs/dispatches -d '{"event_type":"manual_daily","client_payload": {"id":",6,7,8,9,"}' 
+
+  job_10_13:
+    # Name the Job
+    name: job_10_13
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+     
+          
+      # Runs the Super-Linter action
+      - name: run_10_13
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          SCHEDULE_TOKEN: ${{ secrets.SCHEDULE_TOKEN }}
+        run: |
+          curl -X POST -H "authorization: Bearer ${{ secrets.SCHEDULE_TOKEN }} https://api.github.com/repos/brocjae/pub_hofs/dispatches -d '{"event_type":"manual_daily","client_payload": {"id":",10,11,12,13,"}' 
+
+  job_14_17:
+    # Name the Job
+    name: job_14_17
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+     
+          
+      # Runs the Super-Linter action
+      - name: run_14_17
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          SCHEDULE_TOKEN: ${{ secrets.SCHEDULE_TOKEN }}
+        run: |
+          curl -X POST -H "authorization: Bearer ${{ secrets.SCHEDULE_TOKEN }} https://api.github.com/repos/brocjae/pub_hofs/dispatches -d '{"event_type":"manual_daily","client_payload": {"id":",14,15,16,17,"}' 
+
+  job_18_20:
+    # Name the Job
+    name: job_18_20
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+     
+          
+      # Runs the Super-Linter action
+      - name: run_18_20
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          SCHEDULE_TOKEN: ${{ secrets.SCHEDULE_TOKEN }}
+        run: |
+          curl -X POST -H "authorization: Bearer ${{ secrets.SCHEDULE_TOKEN }} https://api.github.com/repos/brocjae/pub_hofs/dispatches -d '{"event_type":"manual_daily","client_payload": {"id":",18,19,20,"}' 
