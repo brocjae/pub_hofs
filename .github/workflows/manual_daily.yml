@@ -43,10 +43,14 @@ jobs:
       - name: Run daily_0
         env:
           DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
+          sleep 0
           python run_daily_hof.py 0 
 
   daily_1:
@@ -84,10 +88,14 @@ jobs:
       - name: Run daily_1
         env:
           DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
+          sleep 7
           python run_daily_hof.py 1 
 
   daily_2:
@@ -125,10 +133,14 @@ jobs:
       - name: Run daily_2
         env:
           DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
+          sleep 14
           python run_daily_hof.py 2 
 
   daily_3:
@@ -166,10 +178,14 @@ jobs:
       - name: Run daily_3
         env:
           DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
+          sleep 21
           python run_daily_hof.py 3 
 
   daily_4:
@@ -207,10 +223,14 @@ jobs:
       - name: Run daily_4
         env:
           DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
+          sleep 28
           python run_daily_hof.py 4 
 
   daily_5:
@@ -248,10 +268,14 @@ jobs:
       - name: Run daily_5
         env:
           DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
+          sleep 35
           python run_daily_hof.py 5 
 
   daily_6:
@@ -289,10 +313,14 @@ jobs:
       - name: Run daily_6
         env:
           DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
+          sleep 42
           python run_daily_hof.py 6 
 
   daily_7:
@@ -330,10 +358,14 @@ jobs:
       - name: Run daily_7
         env:
           DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
+          sleep 49
           python run_daily_hof.py 7 
 
   daily_8:
@@ -371,10 +403,14 @@ jobs:
       - name: Run daily_8
         env:
           DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
+          sleep 56
           python run_daily_hof.py 8 
 
   daily_9:
@@ -412,10 +448,14 @@ jobs:
       - name: Run daily_9
         env:
           DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
+          sleep 63
           python run_daily_hof.py 9 
 
   daily_10:
@@ -453,10 +493,14 @@ jobs:
       - name: Run daily_10
         env:
           DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
+          sleep 70
           python run_daily_hof.py 10 
 
   daily_11:
@@ -494,10 +538,14 @@ jobs:
       - name: Run daily_11
         env:
           DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
+          sleep 77
           python run_daily_hof.py 11 
 
   daily_12:
@@ -535,10 +583,14 @@ jobs:
       - name: Run daily_12
         env:
           DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
+          sleep 84
           python run_daily_hof.py 12 
 
   daily_13:
@@ -576,10 +628,14 @@ jobs:
       - name: Run daily_13
         env:
           DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
+          sleep 91
           python run_daily_hof.py 13 
 
   daily_14:
@@ -617,10 +673,14 @@ jobs:
       - name: Run daily_14
         env:
           DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
+          sleep 98
           python run_daily_hof.py 14 
 
   daily_15:
@@ -658,10 +718,14 @@ jobs:
       - name: Run daily_15
         env:
           DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
+          sleep 105
           python run_daily_hof.py 15 
 
   daily_16:
@@ -699,10 +763,14 @@ jobs:
       - name: Run daily_16
         env:
           DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
+          sleep 112
           python run_daily_hof.py 16 
 
   daily_17:
@@ -740,10 +808,14 @@ jobs:
       - name: Run daily_17
         env:
           DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
+          sleep 119
           python run_daily_hof.py 17 
 
   daily_18:
@@ -781,10 +853,14 @@ jobs:
       - name: Run daily_18
         env:
           DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
+          sleep 126
           python run_daily_hof.py 18 
 
   daily_19:
@@ -822,10 +898,14 @@ jobs:
       - name: Run daily_19
         env:
           DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
+          sleep 133
           python run_daily_hof.py 19 
 
   daily_20:
@@ -863,10 +943,14 @@ jobs:
       - name: Run daily_20
         env:
           DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
+          sleep 140
           python run_daily_hof.py 20 
 
   daily_21:
@@ -904,10 +988,14 @@ jobs:
       - name: Run daily_21
         env:
           DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
+          sleep 147
           python run_daily_hof.py 21 
 
   daily_22:
@@ -945,8 +1033,12 @@ jobs:
       - name: Run daily_22
         env:
           DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
+          sleep 154
           python run_daily_hof.py 22 
