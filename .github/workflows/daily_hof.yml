@@ -26,4 +26,4 @@ jobs:
           MASTER_KEY: ${{ secrets.MASTER_KEY}}
           SCHEDULE_TOKEN: ${{ secrets.SCHEDULE_TOKEN }}
         run: |
-          curl -X POST -H "Accept: application/vnd.github.v3+json" -H "authorization: Bearer ${{ secrets.SCHEDULE_TOKEN }}" https://api.github.com/repos/brocjae/pub_hofs/dispatches -d "{'event_type':'send_multiple','client_payload': {'i':',4,5,6,7,'}"
+          curl -X POST -H "authorization: Bearer ${{ secrets.SCHEDULE_TOKEN }}" https://api.github.com/repos/brocjae/pub_hofs/dispatches -d '{"event_type":"manual_daily","client_payload": {"id":",2,3,4,5,"}'
