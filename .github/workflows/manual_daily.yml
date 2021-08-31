@@ -4,8 +4,9 @@ name: manual_daily
 on:
   repository_dispatch:
     types: manual_daily
-    
+
 jobs:
+
 
   daily_0:
     # Name the Job
@@ -29,9 +30,9 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${ secrets.MASTER_KEY }
-          GOTAUTH: ${ secrets.GOTAUTH }
-          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
@@ -70,9 +71,9 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${ secrets.MASTER_KEY }
-          GOTAUTH: ${ secrets.GOTAUTH }
-          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
@@ -111,9 +112,9 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${ secrets.MASTER_KEY }
-          GOTAUTH: ${ secrets.GOTAUTH }
-          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
@@ -152,9 +153,9 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${ secrets.MASTER_KEY }
-          GOTAUTH: ${ secrets.GOTAUTH }
-          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
@@ -193,9 +194,9 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${ secrets.MASTER_KEY }
-          GOTAUTH: ${ secrets.GOTAUTH }
-          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
@@ -234,9 +235,9 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${ secrets.MASTER_KEY }
-          GOTAUTH: ${ secrets.GOTAUTH }
-          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
@@ -275,9 +276,9 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${ secrets.MASTER_KEY }
-          GOTAUTH: ${ secrets.GOTAUTH }
-          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
@@ -316,9 +317,9 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${ secrets.MASTER_KEY }
-          GOTAUTH: ${ secrets.GOTAUTH }
-          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
@@ -357,9 +358,9 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${ secrets.MASTER_KEY }
-          GOTAUTH: ${ secrets.GOTAUTH }
-          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
@@ -398,9 +399,9 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${ secrets.MASTER_KEY }
-          GOTAUTH: ${ secrets.GOTAUTH }
-          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
@@ -439,9 +440,9 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${ secrets.MASTER_KEY }
-          GOTAUTH: ${ secrets.GOTAUTH }
-          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
@@ -480,9 +481,9 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${ secrets.MASTER_KEY }
-          GOTAUTH: ${ secrets.GOTAUTH }
-          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
@@ -521,9 +522,9 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${ secrets.MASTER_KEY }
-          GOTAUTH: ${ secrets.GOTAUTH }
-          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
@@ -562,9 +563,9 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${ secrets.MASTER_KEY }
-          GOTAUTH: ${ secrets.GOTAUTH }
-          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
@@ -603,9 +604,9 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${ secrets.MASTER_KEY }
-          GOTAUTH: ${ secrets.GOTAUTH }
-          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
@@ -644,9 +645,9 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${ secrets.MASTER_KEY }
-          GOTAUTH: ${ secrets.GOTAUTH }
-          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
@@ -685,9 +686,9 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${ secrets.MASTER_KEY }
-          GOTAUTH: ${ secrets.GOTAUTH }
-          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
@@ -726,9 +727,9 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${ secrets.MASTER_KEY }
-          GOTAUTH: ${ secrets.GOTAUTH }
-          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
@@ -767,9 +768,9 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${ secrets.MASTER_KEY }
-          GOTAUTH: ${ secrets.GOTAUTH }
-          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
@@ -808,9 +809,9 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${ secrets.MASTER_KEY }
-          GOTAUTH: ${ secrets.GOTAUTH }
-          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
@@ -849,9 +850,9 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${ secrets.MASTER_KEY }
-          GOTAUTH: ${ secrets.GOTAUTH }
-          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
@@ -890,9 +891,9 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${ secrets.MASTER_KEY }
-          GOTAUTH: ${ secrets.GOTAUTH }
-          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
@@ -931,9 +932,9 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${ secrets.MASTER_KEY }
-          GOTAUTH: ${ secrets.GOTAUTH }
-          LOG_TOKEN: ${ secrets.LOG_TOKEN }
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
