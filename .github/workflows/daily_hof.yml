@@ -1,0 +1,29 @@
+name: daily_hof1
+
+# Run this workflow every time a new commit pushed to your repository
+on:
+  workflow_dispatch
+
+jobs:
+  # Set the job key. The key is displayed as the job name
+  # when a job name is not provided
+  run_3_10:
+    # Name the Job
+    name: run_3_10
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+     
+          
+      # Runs the Super-Linter action
+      - name: run_23
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          SCHEDULE_TOKEN: ${{ secrets.SCHEDULE_TOKEN }}
+        run: |
+          curl -X POST -H "Accept: application/vnd.github.v3+json" -H "authorization: Bearer ${{ secrets.SCHEDULE_TOKEN }}" https://api.github.com/repos/brocjae/pub_hofs/dispatches -d "{'event_type':'send_multiple','client_payload': {'i':',4,5,6,7,'}"
