@@ -2,8 +2,7 @@ name: daily_hof
 
 # Run this workflow every time a new commit pushed to your repository
 on:
-  schedule:
-    - cron: '0 */5 * * *'
+  workflow_dispatch
 
 jobs:
 
