@@ -27,7 +27,7 @@ jobs:
           MASTER_KEY: ${{ secrets.MASTER_KEY}}
           SCHEDULE_TOKEN: ${{ secrets.SCHEDULE_TOKEN }}
         run: |
-          curl -X POST -H "authorization: Bearer ${{ secrets.SCHEDULE_TOKEN }}" https://api.github.com/repos/brocjae/pub_hofs/dispatches -d '{"event_type":"manual_daily","client_payload": {"id":",2,3,4,5,"}' 
+          curl -X POST -H "authorization: Bearer ${{ secrets.SCHEDULE_TOKEN }}" https://api.github.com/repos/brocjae/pub_hofs/dispatches -d '{"event_type":"manual_daily","client_payload": {"id":",2,4,5,"}' 
 
   job_6_9:
     # Name the Job
