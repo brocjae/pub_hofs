@@ -814,7 +814,7 @@ jobs:
   join_sub:
     # Name the Job
     name: join_sub
-    if:  contains(github.event.client_payload.id, ',sub,')
+    if:  contains(github.event.client_payload.id, ',-1,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
 
