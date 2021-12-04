@@ -3,7 +3,7 @@ name: schedule_winterfall
 # Run this workflow every time a new commit pushed to your repository
 on:
   schedule:
-    - cron: '35 18 * * 3'
+    - cron: '35 18 * * 6'
 
 jobs:
 
