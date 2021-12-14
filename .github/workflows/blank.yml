@@ -1,0 +1,139 @@
+name: schedule_multiple_wf
+
+# Run this workflow every time a new commit pushed to your repository
+on:
+  schedule:
+    - cron: '35 06 * * 3,6'
+
+jobs:
+
+
+  job_0_3:
+    # Name the Job
+    name: job_0_3
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+     
+          
+      # Runs the Super-Linter action
+      - name: job_0_3
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          SCHEDULE_TOKEN: ${{ secrets.SCHEDULE_TOKEN }}
+        run: |
+          curl -X POST -H "authorization: Bearer ${{ secrets.SCHEDULE_TOKEN }}" https://api.github.com/repos/brocjae/pub_hofs/dispatches -d '{"event_type":"join_winterfall","client_payload": {"id":",0,1,2,3,"}' 
+          
+  job_4_7:
+    # Name the Job
+    name: job_4_7
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+     
+          
+      # Runs the Super-Linter action
+      - name: job_4_7
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          SCHEDULE_TOKEN: ${{ secrets.SCHEDULE_TOKEN }}
+        run: |
+          curl -X POST -H "authorization: Bearer ${{ secrets.SCHEDULE_TOKEN }}" https://api.github.com/repos/brocjae/pub_hofs/dispatches -d '{"event_type":"join_winterfall","client_payload": {"id":",4,5,6,7,"}'   
+          
+  job_8_11:
+    # Name the Job
+    name: job_8_11
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+     
+          
+      # Runs the Super-Linter action
+      - name: job_8_11
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          SCHEDULE_TOKEN: ${{ secrets.SCHEDULE_TOKEN }}
+        run: |
+          curl -X POST -H "authorization: Bearer ${{ secrets.SCHEDULE_TOKEN }}" https://api.github.com/repos/brocjae/pub_hofs/dispatches -d '{"event_type":"join_winterfall","client_payload": {"id":",8,9,10,11,"}'                         
+          
+  job_12_15:
+    # Name the Job
+    name: job_12_15
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+     
+          
+      # Runs the Super-Linter action
+      - name: job_12_15
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          SCHEDULE_TOKEN: ${{ secrets.SCHEDULE_TOKEN }}
+        run: |
+          curl -X POST -H "authorization: Bearer ${{ secrets.SCHEDULE_TOKEN }}" https://api.github.com/repos/brocjae/pub_hofs/dispatches -d '{"event_type":"join_winterfall","client_payload": {"id":",12,13,14,15,"}'    
+          
+
+  job_16_19:
+    # Name the Job
+    name: job_16_19
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+     
+          
+      # Runs the Super-Linter action
+      - name: job_16_19
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          SCHEDULE_TOKEN: ${{ secrets.SCHEDULE_TOKEN }}
+        run: |
+          curl -X POST -H "authorization: Bearer ${{ secrets.SCHEDULE_TOKEN }}" https://api.github.com/repos/brocjae/pub_hofs/dispatches -d '{"event_type":"join_winterfall","client_payload": {"id":",16,17,18,19,"}'                 
+
+
+  job_20_23:
+    # Name the Job
+    name: job_20_23
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+     
+          
+      # Runs the Super-Linter action
+      - name: job_20_23
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          SCHEDULE_TOKEN: ${{ secrets.SCHEDULE_TOKEN }}
+        run: |
+          curl -X POST -H "authorization: Bearer ${{ secrets.SCHEDULE_TOKEN }}" https://api.github.com/repos/brocjae/pub_hofs/dispatches -d '{"event_type":"join_winterfall","client_payload": {"id":",20,21,22,23,"}'          
+          
+          
