@@ -5,16 +5,15 @@ on:
   repository_dispatch:
     types: join_rallys
 
-
 jobs:
-  # Set the job key. The key is displayed as the job name
-  # when a job name is not provided
   join_0:
     # Name the Job
-    name: join0
+    name: join_0
     if:  contains(github.event.client_payload.id, ',0,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -29,31 +28,39 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
+          git config --global http.postBuffer 1048576000
           git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof0
+      - name: Run join_0
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python run_join_rally.py  0
-          
+          sleep 0
+          python run_join_rally.py 0 
+
   join_1:
     # Name the Job
-    name: join1
+    name: join_1
     if:  contains(github.event.client_payload.id, ',1,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -68,31 +75,39 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
+          git config --global http.postBuffer 1048576000
           git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof1
+      - name: Run join_1
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python run_join_rally.py  1
-  
+          sleep 7
+          python run_join_rally.py 1 
+
   join_2:
     # Name the Job
-    name: join2
+    name: join_2
     if:  contains(github.event.client_payload.id, ',2,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -107,31 +122,39 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
+          git config --global http.postBuffer 1048576000
           git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof2
+      - name: Run join_2
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python run_join_rally.py  2
-          
+          sleep 14
+          python run_join_rally.py 2 
+
   join_3:
     # Name the Job
-    name: join3
+    name: join_3
     if:  contains(github.event.client_payload.id, ',3,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -146,30 +169,39 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
+          git config --global http.postBuffer 1048576000
           git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof3
+      - name: Run join_3
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python run_join_rally.py  3          
+          sleep 21
+          python run_join_rally.py 3 
+
   join_4:
     # Name the Job
-    name: join4
+    name: join_4
     if:  contains(github.event.client_payload.id, ',4,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -184,30 +216,39 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
+          git config --global http.postBuffer 1048576000
           git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof4
+      - name: Run join_4
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python run_join_rally.py  4
+          sleep 28
+          python run_join_rally.py 4 
+
   join_5:
     # Name the Job
-    name: join5
+    name: join_5
     if:  contains(github.event.client_payload.id, ',5,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -222,30 +263,39 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
+          git config --global http.postBuffer 1048576000
           git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof5
+      - name: Run join_5
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python run_join_rally.py  5
+          sleep 35
+          python run_join_rally.py 5 
+
   join_6:
     # Name the Job
-    name: join6
+    name: join_6
     if:  contains(github.event.client_payload.id, ',6,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -260,30 +310,39 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
+          git config --global http.postBuffer 1048576000
           git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof6
+      - name: Run join_6
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python run_join_rally.py  6
+          sleep 42
+          python run_join_rally.py 6 
+
   join_7:
     # Name the Job
-    name: join7
+    name: join_7
     if:  contains(github.event.client_payload.id, ',7,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -298,30 +357,39 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
+          git config --global http.postBuffer 1048576000
           git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof7
+      - name: Run join_7
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python run_join_rally.py  7
+          sleep 49
+          python run_join_rally.py 7 
+
   join_8:
     # Name the Job
-    name: join8
+    name: join_8
     if:  contains(github.event.client_payload.id, ',8,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -336,30 +404,39 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
+          git config --global http.postBuffer 1048576000
           git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof8
+      - name: Run join_8
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python run_join_rally.py  8
+          sleep 56
+          python run_join_rally.py 8 
+
   join_9:
     # Name the Job
-    name: join9
+    name: join_9
     if:  contains(github.event.client_payload.id, ',9,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -374,30 +451,39 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
+          git config --global http.postBuffer 1048576000
           git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof9
+      - name: Run join_9
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python run_join_rally.py  9
+          sleep 63
+          python run_join_rally.py 9 
+
   join_10:
     # Name the Job
-    name: join10
+    name: join_10
     if:  contains(github.event.client_payload.id, ',10,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -412,30 +498,39 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
+          git config --global http.postBuffer 1048576000
           git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof10
+      - name: Run join_10
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python run_join_rally.py  10
+          sleep 70
+          python run_join_rally.py 10 
+
   join_11:
     # Name the Job
-    name: join11
+    name: join_11
     if:  contains(github.event.client_payload.id, ',11,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -450,30 +545,39 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
+          git config --global http.postBuffer 1048576000
           git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof11
+      - name: Run join_11
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python run_join_rally.py  11
+          sleep 77
+          python run_join_rally.py 11 
+
   join_12:
     # Name the Job
-    name: join12
+    name: join_12
     if:  contains(github.event.client_payload.id, ',12,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -488,30 +592,39 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
+          git config --global http.postBuffer 1048576000
           git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof12
+      - name: Run join_12
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python run_join_rally.py  12
+          sleep 84
+          python run_join_rally.py 12 
+
   join_13:
     # Name the Job
-    name: join13
+    name: join_13
     if:  contains(github.event.client_payload.id, ',13,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -526,30 +639,39 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
+          git config --global http.postBuffer 1048576000
           git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof13
+      - name: Run join_13
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python run_join_rally.py  13
+          sleep 91
+          python run_join_rally.py 13 
+
   join_14:
     # Name the Job
-    name: join14
+    name: join_14
     if:  contains(github.event.client_payload.id, ',14,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -564,30 +686,39 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
+          git config --global http.postBuffer 1048576000
           git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof14
+      - name: Run join_14
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python run_join_rally.py  14
+          sleep 98
+          python run_join_rally.py 14 
+
   join_15:
     # Name the Job
-    name: join15
+    name: join_15
     if:  contains(github.event.client_payload.id, ',15,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -602,30 +733,39 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
+          git config --global http.postBuffer 1048576000
           git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof15
+      - name: Run join_15
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python run_join_rally.py  15
+          sleep 105
+          python run_join_rally.py 15 
+
   join_16:
     # Name the Job
-    name: join16
+    name: join_16
     if:  contains(github.event.client_payload.id, ',16,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -640,30 +780,39 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
+          git config --global http.postBuffer 1048576000
           git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof16
+      - name: Run join_16
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python run_join_rally.py  16
+          sleep 112
+          python run_join_rally.py 16 
+
   join_17:
     # Name the Job
-    name: join17
+    name: join_17
     if:  contains(github.event.client_payload.id, ',17,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -678,30 +827,39 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
+          git config --global http.postBuffer 1048576000
           git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof17
+      - name: Run join_17
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python run_join_rally.py  17
+          sleep 119
+          python run_join_rally.py 17 
+
   join_18:
     # Name the Job
-    name: join18
+    name: join_18
     if:  contains(github.event.client_payload.id, ',18,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -716,30 +874,39 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
+          git config --global http.postBuffer 1048576000
           git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof18
+      - name: Run join_18
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python run_join_rally.py  18
+          sleep 126
+          python run_join_rally.py 18 
+
   join_19:
     # Name the Job
-    name: join19
+    name: join_19
     if:  contains(github.event.client_payload.id, ',19,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -754,31 +921,39 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
+          git config --global http.postBuffer 1048576000
           git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof19
+      - name: Run join_19
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python run_join_rally.py  19
-          
+          sleep 133
+          python run_join_rally.py 19 
+
   join_20:
     # Name the Job
-    name: join20
+    name: join_20
     if:  contains(github.event.client_payload.id, ',20,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -793,31 +968,39 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
+          git config --global http.postBuffer 1048576000
           git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof20
+      - name: Run join_20
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python run_join_rally.py  20
+          sleep 140
+          python run_join_rally.py 20 
 
   join_21:
     # Name the Job
-    name: join21
+    name: join_21
     if:  contains(github.event.client_payload.id, ',21,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -832,21 +1015,121 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
+          git config --global http.postBuffer 1048576000
           git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof21
+      - name: Run join_21
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python run_join_rally.py  21
+          sleep 147
+          python run_join_rally.py 21 
+
+  join_22:
+    # Name the Job
+    name: join_22
+    if:  contains(github.event.client_payload.id, ',22,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+        run: |
+          cd ../../
+          pwd
+          git config --global http.postBuffer 1048576000
+          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          cd got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run join_22
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          sleep 154
+          python run_join_rally.py 22 
+
+  join_23:
+    # Name the Job
+    name: join_23
+    if:  contains(github.event.client_payload.id, ',23,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+        run: |
+          cd ../../
+          pwd
+          git config --global http.postBuffer 1048576000
+          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          cd got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run join_23
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          sleep 161
+          python run_join_rally.py 23 
