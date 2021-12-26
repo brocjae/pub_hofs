@@ -5,16 +5,17 @@ on:
   repository_dispatch:
     types: send_multiple
 
-
 jobs:
-  # Set the job key. The key is displayed as the job name
-  # when a job name is not provided
+
+
   send_0:
     # Name the Job
-    name: send0
-    if:  0>1
+    name: send_0
+    if:  contains(github.event.client_payload.id, ',0,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -29,31 +30,40 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git config --global http.postBuffer 1048576000
+          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git fetch --unshallow
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof0
+      - name: Run send_0
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python SentHOF.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 0
-          
+          sleep 0
+          python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 0 
+
   send_1:
     # Name the Job
-    name: send1
-    if:  0>1
+    name: send_1
+    if:  contains(github.event.client_payload.id, ',1,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -68,31 +78,40 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git config --global http.postBuffer 1048576000
+          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git fetch --unshallow
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof1
+      - name: Run send_1
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python SentHOF.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 1
-  
+          sleep 7
+          python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 1 
+
   send_2:
     # Name the Job
-    name: send2
+    name: send_2
     if:  contains(github.event.client_payload.id, ',2,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -107,31 +126,40 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git config --global http.postBuffer 1048576000
+          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git fetch --unshallow
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof2
+      - name: Run send_2
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python SentHOF.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 2
-          
+          sleep 14
+          python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 2 
+
   send_3:
     # Name the Job
-    name: send3
+    name: send_3
     if:  contains(github.event.client_payload.id, ',3,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -146,30 +174,40 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git config --global http.postBuffer 1048576000
+          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git fetch --unshallow
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof3
+      - name: Run send_3
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python SentHOF.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 3          
+          sleep 21
+          python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 3 
+
   send_4:
     # Name the Job
-    name: send4
+    name: send_4
     if:  contains(github.event.client_payload.id, ',4,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -184,30 +222,40 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git config --global http.postBuffer 1048576000
+          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git fetch --unshallow
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof4
+      - name: Run send_4
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python SentHOF.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 4
+          sleep 28
+          python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 4 
+
   send_5:
     # Name the Job
-    name: send5
+    name: send_5
     if:  contains(github.event.client_payload.id, ',5,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -222,30 +270,40 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git config --global http.postBuffer 1048576000
+          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git fetch --unshallow
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof5
+      - name: Run send_5
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python SentHOF.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 5
+          sleep 35
+          python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 5 
+
   send_6:
     # Name the Job
-    name: send6
+    name: send_6
     if:  contains(github.event.client_payload.id, ',6,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -260,30 +318,40 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git config --global http.postBuffer 1048576000
+          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git fetch --unshallow
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof6
+      - name: Run send_6
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python SentHOF.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 6
+          sleep 42
+          python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 6 
+
   send_7:
     # Name the Job
-    name: send7
+    name: send_7
     if:  contains(github.event.client_payload.id, ',7,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -298,30 +366,40 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git config --global http.postBuffer 1048576000
+          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git fetch --unshallow
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof7
+      - name: Run send_7
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python SentHOF.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 7
+          sleep 49
+          python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 7 
+
   send_8:
     # Name the Job
-    name: send8
+    name: send_8
     if:  contains(github.event.client_payload.id, ',8,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -336,30 +414,40 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git config --global http.postBuffer 1048576000
+          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git fetch --unshallow
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof8
+      - name: Run send_8
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python SentHOF.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 8
+          sleep 56
+          python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 8 
+
   send_9:
     # Name the Job
-    name: send9
+    name: send_9
     if:  contains(github.event.client_payload.id, ',9,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -374,30 +462,40 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git config --global http.postBuffer 1048576000
+          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git fetch --unshallow
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof9
+      - name: Run send_9
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python SentHOF.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 9
+          sleep 63
+          python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 9 
+
   send_10:
     # Name the Job
-    name: send10
+    name: send_10
     if:  contains(github.event.client_payload.id, ',10,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -412,30 +510,40 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git config --global http.postBuffer 1048576000
+          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git fetch --unshallow
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof10
+      - name: Run send_10
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python SentHOF.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 10
+          sleep 70
+          python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 10 
+
   send_11:
     # Name the Job
-    name: send11
+    name: send_11
     if:  contains(github.event.client_payload.id, ',11,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -450,30 +558,40 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git config --global http.postBuffer 1048576000
+          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git fetch --unshallow
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof11
+      - name: Run send_11
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python SentHOF.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 11
+          sleep 77
+          python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 11 
+
   send_12:
     # Name the Job
-    name: send12
+    name: send_12
     if:  contains(github.event.client_payload.id, ',12,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -488,30 +606,40 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git config --global http.postBuffer 1048576000
+          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git fetch --unshallow
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof12
+      - name: Run send_12
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python SentHOF.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 12
+          sleep 84
+          python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 12 
+
   send_13:
     # Name the Job
-    name: send13
+    name: send_13
     if:  contains(github.event.client_payload.id, ',13,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -526,30 +654,40 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git config --global http.postBuffer 1048576000
+          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git fetch --unshallow
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof13
+      - name: Run send_13
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python SentHOF.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 13
+          sleep 91
+          python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 13 
+
   send_14:
     # Name the Job
-    name: send14
+    name: send_14
     if:  contains(github.event.client_payload.id, ',14,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -564,30 +702,40 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git config --global http.postBuffer 1048576000
+          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git fetch --unshallow
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof14
+      - name: Run send_14
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python SentHOF.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 14
+          sleep 98
+          python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 14 
+
   send_15:
     # Name the Job
-    name: send15
+    name: send_15
     if:  contains(github.event.client_payload.id, ',15,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -602,30 +750,40 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git config --global http.postBuffer 1048576000
+          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git fetch --unshallow
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof15
+      - name: Run send_15
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python SentHOF.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 15
+          sleep 105
+          python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 15 
+
   send_16:
     # Name the Job
-    name: send16
+    name: send_16
     if:  contains(github.event.client_payload.id, ',16,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -640,30 +798,40 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git config --global http.postBuffer 1048576000
+          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git fetch --unshallow
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof16
+      - name: Run send_16
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python SentHOF.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 16
+          sleep 112
+          python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 16 
+
   send_17:
     # Name the Job
-    name: send17
+    name: send_17
     if:  contains(github.event.client_payload.id, ',17,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -678,30 +846,40 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git config --global http.postBuffer 1048576000
+          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git fetch --unshallow
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof17
+      - name: Run send_17
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python SentHOF.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 17
+          sleep 119
+          python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 17 
+
   send_18:
     # Name the Job
-    name: send18
+    name: send_18
     if:  contains(github.event.client_payload.id, ',18,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -716,30 +894,40 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git config --global http.postBuffer 1048576000
+          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git fetch --unshallow
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof18
+      - name: Run send_18
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python SentHOF.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 18
+          sleep 126
+          python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 18 
+
   send_19:
     # Name the Job
-    name: send19
+    name: send_19
     if:  contains(github.event.client_payload.id, ',19,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -754,30 +942,40 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git config --global http.postBuffer 1048576000
+          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git fetch --unshallow
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof19
+      - name: Run send_19
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python SentHOF.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 19
+          sleep 133
+          python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 19 
+
   send_20:
     # Name the Job
-    name: send20
+    name: send_20
     if:  contains(github.event.client_payload.id, ',20,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -792,31 +990,40 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git config --global http.postBuffer 1048576000
+          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git fetch --unshallow
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof20
+      - name: Run send_20
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python SentHOF.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 20
+          sleep 140
+          python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 20 
 
   send_21:
     # Name the Job
-    name: send20
-    if:  contains(github.event.client_payload.id, ',20,')
+    name: send_21
+    if:  contains(github.event.client_payload.id, ',21,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -831,31 +1038,40 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git config --global http.postBuffer 1048576000
+          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git fetch --unshallow
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof21
+      - name: Run send_21
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python SentHOF.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 21
+          sleep 147
+          python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 21 
 
   send_22:
     # Name the Job
-    name: send20
-    if:  contains(github.event.client_payload.id, ',20,')
+    name: send_22
+    if:  contains(github.event.client_payload.id, ',22,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -870,32 +1086,40 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git config --global http.postBuffer 1048576000
+          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git fetch --unshallow
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof22
+      - name: Run send_22
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python SentHOF.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 22
-
+          sleep 154
+          python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 22 
 
   send_23:
     # Name the Job
-    name: send20
-    if:  contains(github.event.client_payload.id, ',20,')
+    name: send_23
+    if:  contains(github.event.client_payload.id, ',23,')
     # Set the type of machine to run on
     runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -910,21 +1134,28 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
           cd ../../
           pwd
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git config --global http.postBuffer 1048576000
+          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
+          git fetch --unshallow
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-      - name: Run hof23
+      - name: Run send_23
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
           cd /home/runner/work/got_auto/src
           python --version
-          python SentHOF.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 23
+          sleep 161
+          python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 23 
