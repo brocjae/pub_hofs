@@ -17,6 +17,10 @@ jobs:
     steps:
       - name: Check out my other private repo
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${{ secrets.BK3K_TOKEN }} # `GH_PAT` is a secret that contains your PAT
+          path: got_auto
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
