@@ -15,6 +15,11 @@ jobs:
     timeout-minutes: 120
 
     steps:
+      - name: Check out my other private repo
+        uses: actions/checkout@master
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${{ secrets.GOTAUTH }}
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -30,13 +35,6 @@ jobs:
         run: |
           cd ../../
           pwd
-          git --version
-          sudo add-apt-repository ppa:git-core/ppa -y
-          sudo apt-get update
-          sudo apt-get install git -y
-          git --version
-          git clone --depth 1 https://brocjae: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@github.com/brocjae/pub_hofs.git
-          git fetch --unshallow
           cd got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
