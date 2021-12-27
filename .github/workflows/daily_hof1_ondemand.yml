@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: brokenjade3000/got_auto
-          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          token: ${ secrets.BK3K_TOKEN } 
           path: got_auto        
 
       - name: set up python 3.6
