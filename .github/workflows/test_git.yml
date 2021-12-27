@@ -39,6 +39,7 @@ jobs:
           DEFAULT_BRANCH: main
           MASTER_KEY: ${{ secrets.MASTER_KEY}}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GOTAUTH: ${{ secrets.GOTAUTH}}
         run: |
           pwd
           cd /home/runner/work/pub_hofs/pub_hofs
