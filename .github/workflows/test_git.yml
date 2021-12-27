@@ -35,6 +35,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install git -y
           git --version
+          echo $GOTAUTH
           git clone --depth 1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
           git fetch --unshallow
           cd got_auto
