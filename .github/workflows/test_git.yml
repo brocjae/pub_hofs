@@ -29,6 +29,8 @@ jobs:
           MASTER_KEY: ${{ secrets.MASTER_KEY}}
           GOTAUTH: ${{ secrets.GOTAUTH}}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          pwd
 
           
       # Runs the Super-Linter action
