@@ -1,0 +1,1161 @@
+name: command_multi
+
+# Run this workflow every time a new commit pushed to your repository
+on:
+  repository_dispatch:
+    types: command_multi
+
+jobs:
+
+
+  command_multi_0:
+    # Name the Job
+    name: command_multi_0
+    if:  contains(github.event.client_payload.id, ',0,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Check out my other private repo
+        uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${{ secrets.BK3K_TOKEN }} # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+        run: |
+          mv /home/runner/work/pub_hofs/pub_hofs/got_auto /home/runner/work/got_auto
+          cd /home/runner/work/got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run command_multi_0
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          sleep 0
+          python ${{ github.event.client_payload.command }}.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 0 
+
+  command_multi_1:
+    # Name the Job
+    name: command_multi_1
+    if:  contains(github.event.client_payload.id, ',1,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Check out my other private repo
+        uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${{ secrets.BK3K_TOKEN }} # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+        run: |
+          mv /home/runner/work/pub_hofs/pub_hofs/got_auto /home/runner/work/got_auto
+          cd /home/runner/work/got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run command_multi_1
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          sleep 7
+          python ${{ github.event.client_payload.command }}.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 1 
+
+  command_multi_2:
+    # Name the Job
+    name: command_multi_2
+    if:  contains(github.event.client_payload.id, ',2,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Check out my other private repo
+        uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${{ secrets.BK3K_TOKEN }} # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+        run: |
+          mv /home/runner/work/pub_hofs/pub_hofs/got_auto /home/runner/work/got_auto
+          cd /home/runner/work/got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run command_multi_2
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          sleep 14
+          python ${{ github.event.client_payload.command }}.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 2 
+
+  command_multi_3:
+    # Name the Job
+    name: command_multi_3
+    if:  contains(github.event.client_payload.id, ',3,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Check out my other private repo
+        uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${{ secrets.BK3K_TOKEN }} # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+        run: |
+          mv /home/runner/work/pub_hofs/pub_hofs/got_auto /home/runner/work/got_auto
+          cd /home/runner/work/got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run command_multi_3
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          sleep 21
+          python ${{ github.event.client_payload.command }}.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 3 
+
+  command_multi_4:
+    # Name the Job
+    name: command_multi_4
+    if:  contains(github.event.client_payload.id, ',4,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Check out my other private repo
+        uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${{ secrets.BK3K_TOKEN }} # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+        run: |
+          mv /home/runner/work/pub_hofs/pub_hofs/got_auto /home/runner/work/got_auto
+          cd /home/runner/work/got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run command_multi_4
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          sleep 28
+          python ${{ github.event.client_payload.command }}.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 4 
+
+  command_multi_5:
+    # Name the Job
+    name: command_multi_5
+    if:  contains(github.event.client_payload.id, ',5,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Check out my other private repo
+        uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${{ secrets.BK3K_TOKEN }} # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+        run: |
+          mv /home/runner/work/pub_hofs/pub_hofs/got_auto /home/runner/work/got_auto
+          cd /home/runner/work/got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run command_multi_5
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          sleep 35
+          python ${{ github.event.client_payload.command }}.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 5 
+
+  command_multi_6:
+    # Name the Job
+    name: command_multi_6
+    if:  contains(github.event.client_payload.id, ',6,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Check out my other private repo
+        uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${{ secrets.BK3K_TOKEN }} # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+        run: |
+          mv /home/runner/work/pub_hofs/pub_hofs/got_auto /home/runner/work/got_auto
+          cd /home/runner/work/got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run command_multi_6
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          sleep 42
+          python ${{ github.event.client_payload.command }}.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 6 
+
+  command_multi_7:
+    # Name the Job
+    name: command_multi_7
+    if:  contains(github.event.client_payload.id, ',7,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Check out my other private repo
+        uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${{ secrets.BK3K_TOKEN }} # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+        run: |
+          mv /home/runner/work/pub_hofs/pub_hofs/got_auto /home/runner/work/got_auto
+          cd /home/runner/work/got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run command_multi_7
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          sleep 49
+          python ${{ github.event.client_payload.command }}.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 7 
+
+  command_multi_8:
+    # Name the Job
+    name: command_multi_8
+    if:  contains(github.event.client_payload.id, ',8,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Check out my other private repo
+        uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${{ secrets.BK3K_TOKEN }} # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+        run: |
+          mv /home/runner/work/pub_hofs/pub_hofs/got_auto /home/runner/work/got_auto
+          cd /home/runner/work/got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run command_multi_8
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          sleep 56
+          python ${{ github.event.client_payload.command }}.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 8 
+
+  command_multi_9:
+    # Name the Job
+    name: command_multi_9
+    if:  contains(github.event.client_payload.id, ',9,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Check out my other private repo
+        uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${{ secrets.BK3K_TOKEN }} # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+        run: |
+          mv /home/runner/work/pub_hofs/pub_hofs/got_auto /home/runner/work/got_auto
+          cd /home/runner/work/got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run command_multi_9
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          sleep 63
+          python ${{ github.event.client_payload.command }}.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 9 
+
+  command_multi_10:
+    # Name the Job
+    name: command_multi_10
+    if:  contains(github.event.client_payload.id, ',10,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Check out my other private repo
+        uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${{ secrets.BK3K_TOKEN }} # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+        run: |
+          mv /home/runner/work/pub_hofs/pub_hofs/got_auto /home/runner/work/got_auto
+          cd /home/runner/work/got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run command_multi_10
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          sleep 70
+          python ${{ github.event.client_payload.command }}.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 10 
+
+  command_multi_11:
+    # Name the Job
+    name: command_multi_11
+    if:  contains(github.event.client_payload.id, ',11,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Check out my other private repo
+        uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${{ secrets.BK3K_TOKEN }} # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+        run: |
+          mv /home/runner/work/pub_hofs/pub_hofs/got_auto /home/runner/work/got_auto
+          cd /home/runner/work/got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run command_multi_11
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          sleep 77
+          python ${{ github.event.client_payload.command }}.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 11 
+
+  command_multi_12:
+    # Name the Job
+    name: command_multi_12
+    if:  contains(github.event.client_payload.id, ',12,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Check out my other private repo
+        uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${{ secrets.BK3K_TOKEN }} # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+        run: |
+          mv /home/runner/work/pub_hofs/pub_hofs/got_auto /home/runner/work/got_auto
+          cd /home/runner/work/got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run command_multi_12
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          sleep 84
+          python ${{ github.event.client_payload.command }}.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 12 
+
+  command_multi_13:
+    # Name the Job
+    name: command_multi_13
+    if:  contains(github.event.client_payload.id, ',13,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Check out my other private repo
+        uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${{ secrets.BK3K_TOKEN }} # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+        run: |
+          mv /home/runner/work/pub_hofs/pub_hofs/got_auto /home/runner/work/got_auto
+          cd /home/runner/work/got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run command_multi_13
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          sleep 91
+          python ${{ github.event.client_payload.command }}.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 13 
+
+  command_multi_14:
+    # Name the Job
+    name: command_multi_14
+    if:  contains(github.event.client_payload.id, ',14,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Check out my other private repo
+        uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${{ secrets.BK3K_TOKEN }} # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+        run: |
+          mv /home/runner/work/pub_hofs/pub_hofs/got_auto /home/runner/work/got_auto
+          cd /home/runner/work/got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run command_multi_14
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          sleep 98
+          python ${{ github.event.client_payload.command }}.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 14 
+
+  command_multi_15:
+    # Name the Job
+    name: command_multi_15
+    if:  contains(github.event.client_payload.id, ',15,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Check out my other private repo
+        uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${{ secrets.BK3K_TOKEN }} # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+        run: |
+          mv /home/runner/work/pub_hofs/pub_hofs/got_auto /home/runner/work/got_auto
+          cd /home/runner/work/got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run command_multi_15
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          sleep 105
+          python ${{ github.event.client_payload.command }}.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 15 
+
+  command_multi_16:
+    # Name the Job
+    name: command_multi_16
+    if:  contains(github.event.client_payload.id, ',16,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Check out my other private repo
+        uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${{ secrets.BK3K_TOKEN }} # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+        run: |
+          mv /home/runner/work/pub_hofs/pub_hofs/got_auto /home/runner/work/got_auto
+          cd /home/runner/work/got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run command_multi_16
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          sleep 112
+          python ${{ github.event.client_payload.command }}.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 16 
+
+  command_multi_17:
+    # Name the Job
+    name: command_multi_17
+    if:  contains(github.event.client_payload.id, ',17,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Check out my other private repo
+        uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${{ secrets.BK3K_TOKEN }} # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+        run: |
+          mv /home/runner/work/pub_hofs/pub_hofs/got_auto /home/runner/work/got_auto
+          cd /home/runner/work/got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run command_multi_17
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          sleep 119
+          python ${{ github.event.client_payload.command }}.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 17 
+
+  command_multi_18:
+    # Name the Job
+    name: command_multi_18
+    if:  contains(github.event.client_payload.id, ',18,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Check out my other private repo
+        uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${{ secrets.BK3K_TOKEN }} # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+        run: |
+          mv /home/runner/work/pub_hofs/pub_hofs/got_auto /home/runner/work/got_auto
+          cd /home/runner/work/got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run command_multi_18
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          sleep 126
+          python ${{ github.event.client_payload.command }}.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 18 
+
+  command_multi_19:
+    # Name the Job
+    name: command_multi_19
+    if:  contains(github.event.client_payload.id, ',19,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Check out my other private repo
+        uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${{ secrets.BK3K_TOKEN }} # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+        run: |
+          mv /home/runner/work/pub_hofs/pub_hofs/got_auto /home/runner/work/got_auto
+          cd /home/runner/work/got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run command_multi_19
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          sleep 133
+          python ${{ github.event.client_payload.command }}.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 19 
+
+  command_multi_20:
+    # Name the Job
+    name: command_multi_20
+    if:  contains(github.event.client_payload.id, ',20,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Check out my other private repo
+        uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${{ secrets.BK3K_TOKEN }} # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+        run: |
+          mv /home/runner/work/pub_hofs/pub_hofs/got_auto /home/runner/work/got_auto
+          cd /home/runner/work/got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run command_multi_20
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          sleep 140
+          python ${{ github.event.client_payload.command }}.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 20 
+
+  command_multi_21:
+    # Name the Job
+    name: command_multi_21
+    if:  contains(github.event.client_payload.id, ',21,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Check out my other private repo
+        uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${{ secrets.BK3K_TOKEN }} # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+        run: |
+          mv /home/runner/work/pub_hofs/pub_hofs/got_auto /home/runner/work/got_auto
+          cd /home/runner/work/got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run command_multi_21
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          sleep 147
+          python ${{ github.event.client_payload.command }}.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 21 
+
+  command_multi_22:
+    # Name the Job
+    name: command_multi_22
+    if:  contains(github.event.client_payload.id, ',22,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Check out my other private repo
+        uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${{ secrets.BK3K_TOKEN }} # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+        run: |
+          mv /home/runner/work/pub_hofs/pub_hofs/got_auto /home/runner/work/got_auto
+          cd /home/runner/work/got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run command_multi_22
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          sleep 154
+          python ${{ github.event.client_payload.command }}.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 22 
+
+  command_multi_23:
+    # Name the Job
+    name: command_multi_23
+    if:  contains(github.event.client_payload.id, ',23,')
+    # Set the type of machine to run on
+    runs-on: ubuntu-18.04
+    timeout-minutes: 120
+
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Check out my other private repo
+        uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${{ secrets.BK3K_TOKEN }} # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
+
+      - name: set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+
+      - name: install packages
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+        run: |
+          mv /home/runner/work/pub_hofs/pub_hofs/got_auto /home/runner/work/got_auto
+          cd /home/runner/work/got_auto
+          chmod 775 ./script/install.sh
+          ./script/install.sh
+      - name: Run command_multi_23
+        env:
+          DEFAULT_BRANCH: main
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
+        run: |
+          pwd
+          cd /home/runner/work/got_auto/src
+          python --version
+          sleep 161
+          python ${{ github.event.client_payload.command }}.py ${{ github.event.client_payload.x}} ${{ github.event.client_payload.y }} 23 
