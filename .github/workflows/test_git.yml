@@ -48,3 +48,4 @@ jobs:
           pwd
           ls
           python --version
+          ls /home/runner/work/got_auto
