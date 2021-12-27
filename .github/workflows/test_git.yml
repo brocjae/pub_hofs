@@ -16,7 +16,7 @@ jobs:
 
     steps:
       - name: Check out my other private repo
-        uses: actions/checkout@master
+        uses: actions/checkout@v2
         with:
           repository: brokenjade3000/got_auto
           token: ${{ secrets.GOTAUTH }}
