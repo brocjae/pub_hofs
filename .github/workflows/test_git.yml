@@ -35,9 +35,9 @@ jobs:
           cd ../../
           pwd
           git --version
-          add-apt-repository ppa:git-core/ppa -y
-          apt-get update
-          apt-get install git -y
+          sudo add-apt-repository ppa:git-core/ppa -y
+          sudo apt-get update
+          sudo apt-get install git -y
           git --version
           git clone --depth 1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
           git fetch --unshallow
