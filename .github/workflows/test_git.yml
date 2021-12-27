@@ -19,6 +19,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: brokenjade3000/got_auto
+          ref: master
           token: ${{ secrets.GOTAUTH }}
 
       - name: set up python 3.6
