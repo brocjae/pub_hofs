@@ -42,5 +42,8 @@ jobs:
         run: |
           pwd
           cd /home/runner/work/pub_hofs/pub_hofs
+          ls
+          cd /home/runner/work/pub_hofs/
+          ls
           python --version
           python print.py
