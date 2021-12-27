@@ -46,7 +46,6 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH}}
         run: |
           pwd
-          cd /home/runner/work/pub_hofs/pub_hofs
+          cd /home/runner/work/got_auto
           ls
           python --version
-          python print.py
