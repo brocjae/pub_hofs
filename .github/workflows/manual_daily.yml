@@ -21,6 +21,10 @@ jobs:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto        
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -34,11 +38,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run daily_0
@@ -50,7 +50,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 0
           python run_daily_hof.py 0 
@@ -68,6 +68,10 @@ jobs:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto        
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -81,11 +85,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run daily_1
@@ -97,7 +97,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 7
           python run_daily_hof.py 1 
@@ -115,6 +115,10 @@ jobs:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto        
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -128,11 +132,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run daily_2
@@ -144,7 +144,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 14
           python run_daily_hof.py 2 
@@ -162,6 +162,10 @@ jobs:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto        
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -175,11 +179,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run daily_3
@@ -191,7 +191,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 21
           python run_daily_hof.py 3 
@@ -209,6 +209,10 @@ jobs:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto        
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -222,11 +226,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run daily_4
@@ -238,7 +238,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 28
           python run_daily_hof.py 4 
@@ -256,6 +256,10 @@ jobs:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto        
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -269,11 +273,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run daily_5
@@ -285,7 +285,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 35
           python run_daily_hof.py 5 
@@ -303,6 +303,10 @@ jobs:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto        
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -316,11 +320,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run daily_6
@@ -332,7 +332,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 42
           python run_daily_hof.py 6 
@@ -350,6 +350,10 @@ jobs:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto        
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -363,11 +367,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run daily_7
@@ -379,7 +379,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 49
           python run_daily_hof.py 7 
@@ -397,6 +397,10 @@ jobs:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto        
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -410,11 +414,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run daily_8
@@ -426,7 +426,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 56
           python run_daily_hof.py 8 
@@ -444,6 +444,10 @@ jobs:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto        
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -457,11 +461,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run daily_9
@@ -473,7 +473,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 63
           python run_daily_hof.py 9 
@@ -491,6 +491,10 @@ jobs:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto        
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -504,11 +508,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run daily_10
@@ -520,7 +520,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 70
           python run_daily_hof.py 10 
@@ -538,6 +538,10 @@ jobs:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto        
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -551,11 +555,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run daily_11
@@ -567,7 +567,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 77
           python run_daily_hof.py 11 
@@ -585,6 +585,10 @@ jobs:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto        
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -598,11 +602,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run daily_12
@@ -614,7 +614,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 84
           python run_daily_hof.py 12 
@@ -632,6 +632,10 @@ jobs:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto        
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -645,11 +649,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run daily_13
@@ -661,7 +661,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 91
           python run_daily_hof.py 13 
@@ -679,6 +679,10 @@ jobs:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto        
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -692,11 +696,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run daily_14
@@ -708,7 +708,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 98
           python run_daily_hof.py 14 
@@ -726,6 +726,10 @@ jobs:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto        
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -739,11 +743,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run daily_15
@@ -755,7 +755,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 105
           python run_daily_hof.py 15 
@@ -773,6 +773,10 @@ jobs:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto        
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -786,11 +790,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run daily_16
@@ -802,7 +802,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 112
           python run_daily_hof.py 16 
@@ -820,6 +820,10 @@ jobs:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto        
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -833,11 +837,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run daily_17
@@ -849,7 +849,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 119
           python run_daily_hof.py 17 
@@ -867,6 +867,10 @@ jobs:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto        
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -880,11 +884,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run daily_18
@@ -896,7 +896,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 126
           python run_daily_hof.py 18 
@@ -914,6 +914,10 @@ jobs:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto        
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -927,11 +931,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run daily_19
@@ -943,7 +943,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 133
           python run_daily_hof.py 19 
@@ -961,6 +961,10 @@ jobs:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto        
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -974,11 +978,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run daily_20
@@ -990,7 +990,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 140
           python run_daily_hof.py 20 
@@ -1008,6 +1008,10 @@ jobs:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto        
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -1021,11 +1025,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run daily_21
@@ -1037,7 +1037,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 147
           python run_daily_hof.py 21 
@@ -1055,6 +1055,10 @@ jobs:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto        
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -1068,11 +1072,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run daily_22
@@ -1084,7 +1084,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 154
           python run_daily_hof.py 22 
@@ -1102,6 +1102,10 @@ jobs:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto        
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -1115,11 +1119,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run daily_23
@@ -1131,7 +1131,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 161
           python run_daily_hof.py 23 
