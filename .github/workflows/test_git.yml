@@ -17,10 +17,6 @@ jobs:
     steps:
       - name: Check out my other private repo
         uses: actions/checkout@v2
-        with:
-          repository: brokenjade3000/got_auto
-          ref: master
-          token: ${{ secrets.GOTAUTH }}
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -48,5 +44,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs
           python --version
+          python print.py
