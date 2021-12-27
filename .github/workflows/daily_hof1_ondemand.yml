@@ -18,6 +18,10 @@ jobs:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto        
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -27,205 +31,24 @@ jobs:
       - name: install packages
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
-          
-      # Runs the Super-Linter action
-      - name: run_23
+      - name: Run daily_0
         env:
           DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MASTER_KEY: ${{ secrets.MASTER_KEY }}
+          GOTAUTH: ${{ secrets.GOTAUTH }}
+          LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
+          sleep 0
           python run_daily_hof.py 2,3
 
-
- 
-
-  run_45:
-    # Name the Job
-    name: run_45
-    # Set the type of machine to run on
-    runs-on: ubuntu-18.04
-    timeout-minutes: 120
-
-    steps:
-      # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: set up python 3.6
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.6
-
-      - name: install packages
-        env:
-          DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          cd ../../
-          pwd
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          cd got_auto
-          chmod 775 ./script/install.sh
-          ./script/install.sh
-          
-      # Runs the Super-Linter action
-      - name: run_45
-        env:
-          DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          pwd
-          cd /home/runner/work/got_auto/src
-          python --version
-          python run_daily_hof.py 4,5         
-
-            
-  run_67:
-    # Name the Job
-    name: run_67
-    # Set the type of machine to run on
-    runs-on: ubuntu-18.04
-    timeout-minutes: 120
-
-    steps:
-      # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: set up python 3.6
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.6
-
-      - name: install packages
-        env:
-          DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          cd ../../
-          pwd
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          cd got_auto
-          chmod 775 ./script/install.sh
-          ./script/install.sh
-          
-      # Runs the Super-Linter action
-      - name: run_67
-        env:
-          DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          pwd
-          cd /home/runner/work/got_auto/src
-          python --version
-          python run_daily_hof.py 6,7          
-          
-          
-          
-  run_89:
-    # Name the Job
-    name: run_89
-    # Set the type of machine to run on
-    runs-on: ubuntu-18.04
-    timeout-minutes: 120
-
-    steps:
-      # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: set up python 3.6
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.6
-
-      - name: install packages
-        env:
-          DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          cd ../../
-          pwd
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          cd got_auto
-          chmod 775 ./script/install.sh
-          ./script/install.sh
-          
-      # Runs the Super-Linter action
-      - name: run_89
-        env:
-          DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          pwd
-          cd /home/runner/work/got_auto/src
-          python --version
-          python run_daily_hof.py 8,9           
-          
-          
-
-  run_1011:
-    # Name the Job
-    name: run_1011
-    # Set the type of machine to run on
-    runs-on: ubuntu-18.04
-    timeout-minutes: 120
-
-    steps:
-      # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: set up python 3.6
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.6
-
-      - name: install packages
-        env:
-          DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GOTAUTH: ${{ secrets.GOTAUTH}}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          cd ../../
-          pwd
-          git clone https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          cd got_auto
-          chmod 775 ./script/install.sh
-          ./script/install.sh
-          
-      # Runs the Super-Linter action
-      - name: run_1011
-        env:
-          DEFAULT_BRANCH: main
-          MASTER_KEY: ${{ secrets.MASTER_KEY}}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          pwd
-          cd /home/runner/work/got_auto/src
-          python --version
-          python run_daily_hof.py 10,11
