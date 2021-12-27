@@ -29,12 +29,7 @@ jobs:
           MASTER_KEY: ${{ secrets.MASTER_KEY}}
           GOTAUTH: ${{ secrets.GOTAUTH}}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          cd ../../
-          pwd
-          cd got_auto
-          chmod 775 ./script/install.sh
-          ./script/install.sh
+
           
       # Runs the Super-Linter action
       - name: run_23
