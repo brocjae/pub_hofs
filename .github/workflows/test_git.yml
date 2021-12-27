@@ -20,7 +20,7 @@ jobs:
         with:
           repository: brokenjade3000/got_auto
           token: ${{ secrets.BK3K_TOKEN }} # `GH_PAT` is a secret that contains your PAT
-          path: /home/runner/work/got_auto
+          path: got_auto
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -48,4 +48,4 @@ jobs:
           pwd
           ls
           python --version
-          ls /home/runner/work/got_auto
+          ls /home/runner/work/pub_hofs/pub_hofs/got_auto
