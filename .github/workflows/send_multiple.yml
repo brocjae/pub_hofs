@@ -19,8 +19,12 @@ jobs:
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: Checkout code
+      - name: Check out my other private repo
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -34,12 +38,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          git fetch --unshallow
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run send_0
@@ -51,7 +50,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 0
           python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 0 
@@ -67,8 +66,12 @@ jobs:
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: Checkout code
+      - name: Check out my other private repo
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -82,12 +85,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          git fetch --unshallow
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run send_1
@@ -99,7 +97,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 7
           python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 1 
@@ -115,8 +113,12 @@ jobs:
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: Checkout code
+      - name: Check out my other private repo
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -130,12 +132,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          git fetch --unshallow
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run send_2
@@ -147,7 +144,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 14
           python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 2 
@@ -163,8 +160,12 @@ jobs:
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: Checkout code
+      - name: Check out my other private repo
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -178,12 +179,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          git fetch --unshallow
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run send_3
@@ -195,7 +191,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 21
           python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 3 
@@ -211,8 +207,12 @@ jobs:
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: Checkout code
+      - name: Check out my other private repo
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -226,12 +226,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          git fetch --unshallow
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run send_4
@@ -243,7 +238,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 28
           python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 4 
@@ -259,8 +254,12 @@ jobs:
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: Checkout code
+      - name: Check out my other private repo
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -274,12 +273,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          git fetch --unshallow
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run send_5
@@ -291,7 +285,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 35
           python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 5 
@@ -307,8 +301,12 @@ jobs:
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: Checkout code
+      - name: Check out my other private repo
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -322,12 +320,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          git fetch --unshallow
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run send_6
@@ -339,7 +332,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 42
           python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 6 
@@ -355,8 +348,12 @@ jobs:
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: Checkout code
+      - name: Check out my other private repo
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -370,12 +367,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          git fetch --unshallow
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run send_7
@@ -387,7 +379,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 49
           python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 7 
@@ -403,8 +395,12 @@ jobs:
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: Checkout code
+      - name: Check out my other private repo
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -418,12 +414,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          git fetch --unshallow
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run send_8
@@ -435,7 +426,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 56
           python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 8 
@@ -451,8 +442,12 @@ jobs:
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: Checkout code
+      - name: Check out my other private repo
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -466,12 +461,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          git fetch --unshallow
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run send_9
@@ -483,7 +473,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 63
           python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 9 
@@ -499,8 +489,12 @@ jobs:
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: Checkout code
+      - name: Check out my other private repo
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -514,12 +508,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          git fetch --unshallow
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run send_10
@@ -531,7 +520,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 70
           python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 10 
@@ -547,8 +536,12 @@ jobs:
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: Checkout code
+      - name: Check out my other private repo
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -562,12 +555,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          git fetch --unshallow
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run send_11
@@ -579,7 +567,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 77
           python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 11 
@@ -595,8 +583,12 @@ jobs:
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: Checkout code
+      - name: Check out my other private repo
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -610,12 +602,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          git fetch --unshallow
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run send_12
@@ -627,7 +614,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 84
           python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 12 
@@ -643,8 +630,12 @@ jobs:
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: Checkout code
+      - name: Check out my other private repo
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -658,12 +649,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          git fetch --unshallow
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run send_13
@@ -675,7 +661,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 91
           python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 13 
@@ -691,8 +677,12 @@ jobs:
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: Checkout code
+      - name: Check out my other private repo
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -706,12 +696,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          git fetch --unshallow
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run send_14
@@ -723,7 +708,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 98
           python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 14 
@@ -739,8 +724,12 @@ jobs:
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: Checkout code
+      - name: Check out my other private repo
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -754,12 +743,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          git fetch --unshallow
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run send_15
@@ -771,7 +755,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 105
           python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 15 
@@ -787,8 +771,12 @@ jobs:
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: Checkout code
+      - name: Check out my other private repo
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -802,12 +790,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          git fetch --unshallow
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run send_16
@@ -819,7 +802,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 112
           python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 16 
@@ -835,8 +818,12 @@ jobs:
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: Checkout code
+      - name: Check out my other private repo
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -850,12 +837,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          git fetch --unshallow
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run send_17
@@ -867,7 +849,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 119
           python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 17 
@@ -883,8 +865,12 @@ jobs:
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: Checkout code
+      - name: Check out my other private repo
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -898,12 +884,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          git fetch --unshallow
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run send_18
@@ -915,7 +896,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 126
           python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 18 
@@ -931,8 +912,12 @@ jobs:
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: Checkout code
+      - name: Check out my other private repo
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -946,12 +931,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          git fetch --unshallow
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run send_19
@@ -963,7 +943,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 133
           python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 19 
@@ -979,8 +959,12 @@ jobs:
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: Checkout code
+      - name: Check out my other private repo
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -994,12 +978,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          git fetch --unshallow
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run send_20
@@ -1011,7 +990,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 140
           python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 20 
@@ -1027,8 +1006,12 @@ jobs:
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: Checkout code
+      - name: Check out my other private repo
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -1042,12 +1025,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          git fetch --unshallow
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run send_21
@@ -1059,7 +1037,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 147
           python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 21 
@@ -1075,8 +1053,12 @@ jobs:
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: Checkout code
+      - name: Check out my other private repo
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -1090,12 +1072,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          git fetch --unshallow
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run send_22
@@ -1107,7 +1084,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 154
           python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 22 
@@ -1123,8 +1100,12 @@ jobs:
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: Checkout code
+      - name: Check out my other private repo
         uses: actions/checkout@v2
+        with:
+          repository: brokenjade3000/got_auto
+          token: ${ secrets.BK3K_TOKEN } # `GH_PAT` is a secret that contains your PAT
+          path: got_auto      
 
       - name: set up python 3.6
         uses: actions/setup-python@v2
@@ -1138,12 +1119,7 @@ jobs:
           GOTAUTH: ${{ secrets.GOTAUTH }}
           LOG_TOKEN: ${{ secrets.LOG_TOKEN }}
         run: |
-          cd ../../
-          pwd
-          git config --global http.postBuffer 1048576000
-          git clone --depth=1 https://$GOTAUTH@github.com/brokenjade3000/got_auto.git
-          git fetch --unshallow
-          cd got_auto
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto
           chmod 775 ./script/install.sh
           ./script/install.sh
       - name: Run send_23
@@ -1155,7 +1131,7 @@ jobs:
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
           pwd
-          cd /home/runner/work/got_auto/src
+          cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 161
           python SentHOF.py ${ github.event.client_payload.x} ${ github.event.client_payload.y } 23 
