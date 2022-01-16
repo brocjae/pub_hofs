@@ -1,9 +1,9 @@
-name: join_rallys
+name: join_all_xy
 
 # Run this workflow every time a new commit pushed to your repository
 on:
   repository_dispatch:
-    types: join_rallys
+    types: join_all_xy
 
 jobs:
 
