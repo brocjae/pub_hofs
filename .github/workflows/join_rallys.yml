@@ -1,6 +1,6 @@
 name: join_rallys
 
-# Run this workflow every time a new commit pushed to your repository
+# Run this workflow every time a new commit pushed to your repository test
 on:
   repository_dispatch:
     types: join_rallys
