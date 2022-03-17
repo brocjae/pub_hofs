@@ -1,4 +1,4 @@
-name: join_rallys
+name: join_ras
 
 # Run this workflow every time a new commit pushed to your repository test
 on:
