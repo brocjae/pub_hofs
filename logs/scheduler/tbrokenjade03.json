@@ -63,11 +63,12 @@
         "local": "04/10/2022 17:27:57"
     },
     "daily_msg": {
-        "next": 1628971207,
+        "next": 1649670836,
         "param": {
             "track": true,
             "resize": 0.25
-        }
+        },
+        "local": "04/11/2022 03:53:56"
     },
     "continue_bub": {
         "next": 1649643756,
