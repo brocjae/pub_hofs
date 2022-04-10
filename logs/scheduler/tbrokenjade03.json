@@ -1,10 +1,11 @@
 {
     "check_box": {
-        "next": 1628905837,
+        "next": 1649629525,
         "param": {
             "track": true,
             "resize": 0.25
-        }
+        },
+        "local": "04/10/2022 16:25:25"
     },
     "bank_claim": {
         "next": 1626659336,
