@@ -16,12 +16,13 @@
         "local": "04/10/2022 20:29:12"
     },
     "get_taven": {
-        "next": 1628904671,
+        "next": 1649649525,
         "param": {
             "track": true,
             "resize": 0.25,
             "leave_noclick": 1
-        }
+        },
+        "local": "04/10/2022 21:58:45"
     },
     "trade": {
         "next": 1649649735,
