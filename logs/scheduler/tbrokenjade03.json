@@ -55,7 +55,7 @@
         }
     },
     "explore_drag": {
-        "next": 1649650564,
+        "next": 1649655326,
         "param": {
             "track": true,
             "resize": 0.25,
@@ -63,7 +63,7 @@
             "buy": 0,
             "dragon_id": 0
         },
-        "local": "04/10/2022 22:16:04"
+        "local": "04/10/2022 23:35:26"
     },
     "daily_msg": {
         "next": 1649670836,
