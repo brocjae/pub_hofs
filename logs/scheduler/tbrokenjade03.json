@@ -24,12 +24,12 @@
         }
     },
     "trade": {
-        "next": 1649633690,
+        "next": 1649649735,
         "param": {
             "track": true,
             "resize": 0.25
         },
-        "local": "04/10/2022 17:34:50"
+        "local": "04/10/2022 22:02:15"
     },
     "complete_all_trials": {
         "next": 1649722207,
