@@ -70,5 +70,9 @@
     "training_ground": {
         "next": 1649685811,
         "local": "04/11/2022 08:03:31"
+    },
+    "schedule_leader": {
+        "next": 1649646558,
+        "local": "04/10/2022 21:09:18"
     }
 }
