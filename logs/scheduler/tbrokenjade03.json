@@ -145,13 +145,12 @@
     },
     "daily_farms": {
         "finished": [
-            "grain",
-            "mine",
-            "mint",
             "quar",
+            "grain",
+            "mint",
             "lumb"
         ],
-        "next": 1649724028,
-        "local": "04/11/2022 18:40:28"
+        "next": 1649730125,
+        "local": "04/11/2022 20:22:05"
     }
 }
