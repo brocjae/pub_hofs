@@ -33,12 +33,12 @@
         "local": "04/13/2022 17:27:04"
     },
     "complete_all_trials": {
-        "next": 1649895008,
+        "next": 1649981408,
         "param": {
             "track": true,
             "resize": 0.25
         },
-        "local": "04/13/2022 18:10:08"
+        "local": "04/14/2022 18:10:08"
     },
     "train_mil": {
         "next": 1649891739,
