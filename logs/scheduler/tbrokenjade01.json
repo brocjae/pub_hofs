@@ -79,12 +79,12 @@
         "finished": [
             "grain",
             "mint",
-            "mine",
+            "lumb",
             "quar",
-            "lumb"
+            "mine"
         ],
-        "next": 1650324906,
-        "local": "04/18/2022 17:35:06"
+        "next": 1650416465,
+        "local": "04/19/2022 19:01:05"
     },
     "train_mil": {
         "next": 1650343908,
