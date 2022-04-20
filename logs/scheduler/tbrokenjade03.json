@@ -91,13 +91,13 @@
         "local": "04/19/2022 17:33:02"
     },
     "sell_quick_box": {
-        "next": 1650410618,
+        "next": 1650419853,
         "param": {
             "track": true,
             "resize": 0.25,
             "min_level": 5
         },
-        "local": "04/19/2022 17:23:38"
+        "local": "04/19/2022 19:57:33"
     },
     "get_alli_quest": {
         "next": 1650422483,
