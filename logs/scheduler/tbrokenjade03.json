@@ -16,13 +16,13 @@
         "local": "04/22/2022 15:23:50"
     },
     "get_taven": {
-        "next": 1650688351,
+        "next": 1650680559,
         "param": {
             "track": true,
             "resize": 0.25,
             "leave_noclick": 1
         },
-        "local": "04/22/2022 22:32:31"
+        "local": "04/22/2022 20:22:39"
     },
     "trade": {
         "next": 1650688606,
@@ -33,12 +33,12 @@
         "local": "04/22/2022 22:36:46"
     },
     "complete_all_trials": {
-        "next": 1650686958,
+        "next": 1650688631,
         "param": {
             "track": true,
             "resize": 0.25
         },
-        "local": "04/22/2022 22:09:18"
+        "local": "04/22/2022 22:37:11"
     },
     "explore_drag": {
         "next": 1650687755,
