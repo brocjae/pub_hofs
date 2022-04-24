@@ -108,14 +108,14 @@ jobs:
      
           
       # Runs the Super-Linter action
-      - name: run_18_20
+      - name: run_18_21
         env:
           DEFAULT_BRANCH: main
           MASTER_KEY: ${{ secrets.MASTER_KEY}}
           SCHEDULE_TOKEN: ${{ secrets.SCHEDULE_TOKEN }}
         run: |
           sleep 20
-          curl -X POST -H "authorization: Bearer ${{ secrets.SCHEDULE_TOKEN }}" https://api.github.com/repos/brocjae/pub_hofs/dispatches -d '{"event_type":"manual_daily","client_payload": {"id":",18,19,20,21,"}' 
+          curl -X POST -H "authorization: Bearer ${{ secrets.SCHEDULE_TOKEN }}" https://api.github.com/repos/brocjae/pub_hofs/dispatches -d '{"event_type":"manual_daily","client_payload": {"id":",18,19,21,"}' 
           
   job_22_:
     # Name the Job
