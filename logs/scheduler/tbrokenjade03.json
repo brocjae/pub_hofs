@@ -60,12 +60,12 @@
         "local": "05/01/2022 19:52:41"
     },
     "continue_bub": {
-        "next": 1651418635,
+        "next": 1651444115,
         "param": {
             "track": true,
             "resize": 0.25
         },
-        "local": "05/01/2022 09:23:55"
+        "local": "05/01/2022 16:28:35"
     },
     "training_ground": {
         "next": 1651418501,
