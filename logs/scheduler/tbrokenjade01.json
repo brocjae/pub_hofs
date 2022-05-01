@@ -75,11 +75,12 @@
         "finished": [
             "grain",
             "mine",
-            "lumb",
-            "quar"
+            "mint",
+            "quar",
+            "lumb"
         ],
-        "next": 1651363442,
-        "local": "04/30/2022 18:04:02"
+        "next": 1651451556,
+        "local": "05/01/2022 18:32:36"
     },
     "bank_claim": {
         "next": 1651617483,
