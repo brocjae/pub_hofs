@@ -1,11 +1,11 @@
 {
     "check_box": {
-        "next": 1651487779,
+        "next": 1651487195,
         "param": {
             "track": true,
             "resize": 0.25
         },
-        "local": "05/02/2022 04:36:19"
+        "local": "05/02/2022 04:26:35"
     },
     "bank_claim": {
         "next": 1651471233,
@@ -76,13 +76,13 @@
         "local": "05/02/2022 03:17:43"
     },
     "sell_quick_box": {
-        "next": 1651487692,
+        "next": 1651481699,
         "param": {
             "track": true,
             "resize": 0.25,
             "min_level": 5
         },
-        "local": "05/02/2022 04:34:52"
+        "local": "05/02/2022 02:54:59"
     },
     "get_alli_quest": {
         "next": 1651483759,
