@@ -16,13 +16,13 @@
         "local": "05/02/2022 00:00:33"
     },
     "get_taven": {
-        "next": 1651553089,
+        "next": 1651553464,
         "param": {
             "track": true,
             "resize": 0.25,
             "leave_noclick": 1
         },
-        "local": "05/02/2022 22:44:49"
+        "local": "05/02/2022 22:51:04"
     },
     "trade": {
         "next": 1651553041,
@@ -68,12 +68,12 @@
         "local": "05/03/2022 17:16:56"
     },
     "training_ground": {
-        "next": 1651553225,
+        "next": 1651544998,
         "param": {
             "track": true,
             "resize": 0.25
         },
-        "local": "05/02/2022 22:47:05"
+        "local": "05/02/2022 20:29:58"
     },
     "sell_quick_box": {
         "next": 1651567953,
@@ -101,8 +101,8 @@
         "local": "05/02/2022 22:24:34"
     },
     "auto_transport_rss": {
-        "next": 1651553457,
-        "local": "05/02/2022 22:50:57"
+        "next": 1651551682,
+        "local": "05/02/2022 22:21:22"
     },
     "get_alliance_chests": {
         "next": 1651558345,
