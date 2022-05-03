@@ -68,12 +68,12 @@
         "local": "05/03/2022 17:16:56"
     },
     "training_ground": {
-        "next": 1651562019,
+        "next": 1651584758,
         "param": {
             "track": true,
             "resize": 0.25
         },
-        "local": "05/03/2022 01:13:39"
+        "local": "05/03/2022 07:32:38"
     },
     "sell_quick_box": {
         "next": 1651584918,
