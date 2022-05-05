@@ -72,9 +72,13 @@
         "local": "05/05/2022 12:24:16"
     },
     "daily_farms": {
-        "finished": [],
-        "next": 1651750396,
-        "local": "05/05/2022 05:33:16"
+        "finished": [
+            "grain",
+            "mint",
+            "lumb"
+        ],
+        "next": 1651773082,
+        "local": "05/05/2022 11:51:22"
     },
     "bank_claim": {
         "next": 1651772298,
