@@ -33,12 +33,12 @@
         "local": "05/06/2022 21:13:53"
     },
     "complete_all_trials": {
-        "next": 1651893697,
+        "next": 1651895815,
         "param": {
             "track": true,
             "resize": 0.25
         },
-        "local": "05/06/2022 21:21:37"
+        "local": "05/06/2022 21:56:55"
     },
     "explore_drag": {
         "next": 1651897136,
