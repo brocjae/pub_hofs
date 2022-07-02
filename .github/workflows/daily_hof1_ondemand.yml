@@ -50,5 +50,5 @@ jobs:
           cd /home/runner/work/pub_hofs/pub_hofs/got_auto/src
           python --version
           sleep 0
-          python run_daily_hof.py 2,3
+          python run_daily_hof.py -i 2,3
 
