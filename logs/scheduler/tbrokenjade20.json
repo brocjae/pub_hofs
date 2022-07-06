@@ -115,5 +115,15 @@
     "bank_claim": {
         "next": 1657099854,
         "local": "07/06/2022 03:30:54"
+    },
+    "daily_farms": {
+        "finished": [
+            "grain",
+            "lumb",
+            "quar",
+            "mint"
+        ],
+        "next": 1657100622,
+        "local": "07/06/2022 03:43:42"
     }
 }
