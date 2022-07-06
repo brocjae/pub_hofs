@@ -127,5 +127,15 @@
     "at_groups": {
         "next": 1657110342,
         "local": "07/06/2022 06:25:42"
+    },
+    "daily_farms": {
+        "finished": [
+            "grain",
+            "mint",
+            "lumb",
+            "quar"
+        ],
+        "next": 1657108381,
+        "local": "07/06/2022 05:53:01"
     }
 }
