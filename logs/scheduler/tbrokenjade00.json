@@ -89,6 +89,10 @@
     },
     "daily_train": {
         "log_unfinished": {
+            "inf": [
+                1,
+                500
+            ],
             "cav": [
                 1,
                 500
@@ -103,10 +107,10 @@
             ]
         },
         "log_reset_date": {
-            "reset": "2022-07-20"
+            "reset": "2022-07-21"
         },
-        "next": 1658358766,
-        "local": "07/20/2022 17:12:46"
+        "next": 1658370078,
+        "local": "07/20/2022 20:21:18"
     },
     "daily_farms": {
         "finished": [
